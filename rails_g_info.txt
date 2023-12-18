@@ -1,0 +1,144 @@
+Informações complementares
+
+
+
+Ao executar o comando rails g no terminal, você está usando o comando de geração do Ruby on Rails,
+que é uma poderosa ferramenta para criar automaticamente arquivos e estruturas de diretórios
+relacionados a diferentes aspectos de uma aplicação Rails. O g é uma abreviação de generate.
+
+Ao rodar rails g, você verá uma lista de geradores disponíveis e suas descrições, 
+indicando as diversas tarefas que você pode realizar. Aqui estão alguns exemplos comuns:
+
+
+rails g model NomeDoModelo
+    Gera um novo modelo ActiveRecord junto com uma migração para criar a tabela
+    associada no banco de dados.
+
+Controller:
+    rails g controller NomeDoController
+    Cria um novo controlador com ações padrão e suas visualizações associadas.
+
+Migration:
+    rails g migration NomeDaMigration
+    Gera um novo arquivo de migração no diretório 
+    db/migrate para realizar alterações no esquema do banco de dados.
+
+Scaffold:
+    rails g scaffold NomeDoModelo
+    Cria um conjunto completo de arquivos
+    (modelo, controlador, visualizações, migração) para um recurso.
+
+Mailer:
+    rails g mailer NomeDoMailer
+    Gera um novo mailer, permitindo o envio de e-mails a partir de sua aplicação.
+
+Test Unitário ou RSpec:
+    rails g test_unit NomeDoTeste
+ou
+    rails g rspec:controller NomeDoControlador
+    Cria um novo arquivo de teste unitário ou RSpec.
+
+
+
+Ao executar qualquer um desses comandos, o Rails cria automaticamente
+os arquivos associados e a estrutura de diretórios necessária,
+economizando tempo e esforço na configuração manual. 
+Certifique-se de ajustar os geradores conforme necessário,
+pois eles oferecem várias opções e configurações adicionais.
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+rails g
+Usage: rails generate GENERATOR [args] [options]
+
+General options:
+  -h, [--help]     # Print generator's options and usage
+  -p, [--pretend]  # Run but do not make any changes
+  -f, [--force]    # Overwrite files that already exist
+  -s, [--skip]     # Skip files that already exist
+  -q, [--quiet]    # Suppress status output
+
+Please choose a generator below.
+
+Rails:
+  application_record
+  benchmark
+  channel
+  controller
+  generator
+  helper
+  integration_test
+  jbuilder
+  job
+  mailbox
+  mailer
+  migration
+  model
+  resource
+  scaffold
+  scaffold_controller
+  system_test
+  task
+
+ActiveRecord:
+  active_record:application_record
+  active_record:multi_db
+
+Stimulus:
+  stimulus
+
+TestUnit:
+  test_unit:channel
+  test_unit:generator
+  test_unit:install
+  test_unit:mailbox
+  test_unit:plugin
+
+-----------------------------------------------------------------------------------
+
+rails g controller
+Usage:
+  rails generate controller NAME [action action] [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]              # Skip namespace (affects only isolated engines)
+                                                             # Default: false
+      [--skip-collision-check], [--no-skip-collision-check]  # Skip collision check
+                                                             # Default: false
+      [--skip-routes], [--no-skip-routes]                    # Don't add routes to config/routes.rb.
+      [--helper], [--no-helper]                              # Indicates when to generate helper
+                                                             # Default: true
+  -e, [--template-engine=NAME]                               # Template engine to be invoked
+                                                             # Default: erb
+  -t, [--test-framework=NAME]                                # Test framework to be invoked
+                                                             # Default: test_unit
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Description:
+    Generates a new controller and its views. Pass the controller name, either
+    CamelCased or under_scored, and a list of views as arguments.
+
+    To create a controller within a module, specify the controller name as a
+    path like 'parent_module/controller_name'.
+
+    This generates a controller class in app/controllers and invokes helper,
+    template engine, assets, and test framework generators.
+
+Example:
+    `bin/rails generate controller CreditCards open debit credit close`
+
+    CreditCards controller with URLs like /credit_cards/debit.
+        Controller: app/controllers/credit_cards_controller.rb
+        Test:       test/controllers/credit_cards_controller_test.rb
+        Views:      app/views/credit_cards/debit.html.erb [...]
+        Helper:     app/helpers/credit_cards_helper.rb
