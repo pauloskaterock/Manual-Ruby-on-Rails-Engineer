@@ -86,7 +86,53 @@ comparacao = "abc" <=> "def"  # Retorna -1 (menor que)
 #########################################################################
 
 6. Verificação de Substring:
-ruby
-Copy code
+
 # Verificação de substring
 contem = "Hello, World!".include?("World")  # Retorna true
+
+# -----------------------------------------------------------------
+
+
+# O que você pode fazer com cordas?
+# As cordas podem fazer muitas coisas por você.
+
+# Por exemplo, você pode pedir a uma cadeia de caracteres seu tamanho:
+
+"bacon".size
+
+# você pode dizer a cadeia de caracteres para maiúsculas:
+
+"bacon".upcase
+
+# "BACON"
+
+# Chamamos isso de "métodos", e são muitos.
+
+# Existem métodos que permitem substituir toda ou parte da cadeia de caracteres.
+
+# Gostar:gsub
+
+"bacon".gsub("acon", "inary")
+
+# "binary"
+
+# Ou para dividir a cadeia de caracteres em uma lista de caracteres:
+
+"bacon".chars
+
+# ["b", "a", "c", "o", "n"]
+
+# Convertendo uma cadeia de caracteres em inteiro:
+
+"1".to_i
+
+# Convertendo um inteiro em uma cadeia de caracteres:
+
+1.to_s
+
+# Para combinar números e strings você precisa de uma técnica chamada "string interpolation".
+
+age = 20
+name = "David"
+
+puts "Hello #{name}, our records tell us that you're #{age} years old!"
