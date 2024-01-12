@@ -1,0 +1,79 @@
+Uso Básico do IRB:
+
+Iniciar o IRB:
+
+Você pode iniciar o IRB digitando irb no terminal:
+
+bash
+
+irb
+Isso abrirá um console interativo onde você pode começar a digitar código Ruby.
+
+Executar Código:
+
+Você pode digitar qualquer código Ruby diretamente no console e pressionar "Enter" para executá-lo. 
+Por exemplo:
+
+ruby
+
+
+puts "Hello, World!"
+
+A saída será exibida imediatamente.
+
+Histórico de Comandos:
+
+O IRB mantém um histórico de comandos. 
+Você pode navegar pelos comandos anteriores usando as teclas de seta para cima e para baixo.
+
+Variáveis e Resultados:
+
+O IRB permite que você declare e manipule variáveis:
+
+ruby
+
+x = 10
+y = 20
+x + y
+
+A saída mostrará o resultado da expressão x + y.
+
+Completamento Automático:
+
+O IRB oferece recursos de completamento automático. 
+Pressionando a tecla "Tab", ele mostrará sugestões de métodos e variáveis disponíveis.
+
+Depuração Rápida:
+
+Você pode usar o IRB para depurar rapidamente partes do seu código.
+Adicione binding.irb em qualquer lugar do seu script para entrar no console 
+interativo naquele ponto específico.
+
+ruby
+
+def example_method
+  x = 5
+  binding.irb # Entre no console interativo aqui
+  puts x
+end
+
+example_method
+
+Ajuda e Documentação:
+Você pode obter ajuda e documentação diretamente no IRB usando
+o comando help ou ? seguido de um método ou classe. Por exemplo:
+
+ruby
+
+String.methods
+String.instance_methods
+help String
+
+Isso fornecerá informações sobre os métodos disponíveis para a classe String.
+
+Considerações Finais:
+O IRB é uma ferramenta fundamental para desenvolvedores Ruby, 
+especialmente para aprendizado e experimentação. Ele fornece um ambiente 
+interativo e flexível para trabalhar com código Ruby, testar ideias e depurar. 
+No entanto, para projetos mais extensos e complexos, você pode optar por ferramentas
+mais avançadas, como Pry, que oferece recursos adicionais para depuração interativa.

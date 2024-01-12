@@ -1,0 +1,62 @@
+Pry:
+
+Pry é uma poderosa ferramenta de depuração e console interativo para Ruby. 
+Ele fornece uma experiência de console interativo aprimorada em comparação com o IRB (Interactive Ruby).
+
+Principais recursos do Pry:
+
+Histórico de Comandos:
+
+Pry mantém um histórico de comandos e permite acessar facilmente comandos anteriores 
+usando setas para cima e para baixo.
+
+Destaque de Sintaxe e Cores:
+
+A saída do Pry é formatada de maneira colorida, o que facilita a leitura. 
+Ele destaca a sintaxe para facilitar a identificação de elementos importantes.
+
+Completamento Automático:
+
+Pry oferece recursos de completamento automático, tornando mais rápido e fácil escrever 
+código no console interativo.
+
+Documentação Integrada:
+
+Você pode acessar a documentação de qualquer método ou classe diretamente no console Pry.
+
+Depuração Interativa:
+
+Pry permite que você adicione pontos de interrupção e depure interativamente seu código, 
+examinando variáveis, executando código linha por linha, entre outras funcionalidades.
+
+Uso Básico do Pry:
+Instalação:
+Você pode instalar o Pry como uma gema:
+
+bash
+
+
+gem install pry
+
+Uso Básico:
+
+Para iniciar um console Pry, basta executar:
+
+bash
+
+
+pry
+    Isso abrirá um novo shell com o prompt ">>". Você pode
+
+Para usar Pry em um arquivo Ruby, você pode adicionar a seguinte linha no seu código:
+
+ruby
+
+require 'pry'
+binding.pry
+
+Quando o programa atinge binding.pry, ele entra em um console interativo.
+
+Ambas as ferramentas, RVM e Pry, são valiosas para desenvolvedores Ruby. 
+O RVM ajuda a gerenciar diferentes versões do Ruby em um ambiente, enquanto o 
+Pry oferece uma experiência de console interativo mais poderosa para depuração e exploração de código.

@@ -1,0 +1,50 @@
+O RVM é uma ferramenta que facilita a instalação, gerenciamento e troca
+ entre diferentes versões do Ruby em um ambiente de desenvolvimento. 
+ Ele permite que você tenha várias versões do Ruby instaladas em sua máquina e 
+ mude facilmente entre elas. Além disso, o RVM ajuda a isolar os ambientes de 
+ desenvolvimento para diferentes projetos, garantindo que as gemas e dependências 
+ específicas do projeto sejam mantidas separadas.
+
+ Instalação:
+Para instalar o RVM, você pode usar o seguinte comando em um terminal:
+
+bash
+
+\curl -sSL https://get.rvm.io | bash -s stable
+        O comando acima baixa e executa o script "get.rvm.io",
+
+Uso Básico:
+
+Instalar uma versão específica do Ruby:
+
+bash
+
+rvm install ruby-x.x.x
+
+Usar uma versão específica do Ruby:
+
+bash
+
+rvm use ruby-x.x.x
+
+Definir uma versão padrão do Ruby:
+
+bash
+
+rvm --default use ruby-x.x.x
+
+Listar todas as versões do Ruby instaladas:
+
+bash
+
+rvm list
+
+Gemsets:
+
+O RVM permite criar gemsets, que são ambientes isolados para gemas específicas de um projeto. 
+Isso evita conflitos entre diferentes projetos que podem depender de versões diferentes das mesmas gemas.
+
+bash
+
+rvm gemset create my_project
+rvm gemset use my_project
