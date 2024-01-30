@@ -1,0 +1,162 @@
+Desenvolver habilidades como um engenheiro Ruby on Rails envolve uma combinação de 
+conhecimento teórico, prática de codificação e experiência de projeto. 
+
+Aqui está um roadmap completo com exemplos de exercícios para prática:
+
+**1. Aprenda Ruby:
+Recursos:
+
+Ruby Official Documentation
+Ruby Koans
+Ruby Monk
+
+Exercícios:
+
+Implemente algoritmos simples em Ruby.
+Pratique manipulação de strings, arrays e hashes.
+-------------------------------------------------------------------------
+
+
+**2. Aprofunde-se em Ruby:
+Recursos:
+
+Metaprogramming Ruby
+The Well-Grounded Rubyist
+RubyTapas
+
+Exercícios:
+
+Crie classes e métodos com metaprogramação.
+Explore conceitos avançados, como closures e blocos.
+-------------------------------------------------------------------------
+
+
+**3. Introdução ao Rails:
+Recursos:
+
+Ruby on Rails Guides
+Rails Tutorial by Michael Hartl
+Agile Web Development with Rails
+
+Exercícios:
+
+Construa um aplicativo simples usando o Rails.
+Pratique a criação de modelos, controladores e visualizações.
+-------------------------------------------------------------------------
+
+
+**4. Banco de Dados e ActiveRecord:
+Recursos:
+
+Active Record Basics
+Rails Database Migrations
+Rails Query Interface
+
+Exercícios:
+
+Crie migrações para definir esquemas de banco de dados.
+Execute consultas usando ActiveRecord.
+-------------------------------------------------------------------------
+
+
+**5. APIs e Autenticação:
+Recursos:
+
+Building APIs with Rails
+Devise para autenticação
+
+Exercícios:
+
+Construa uma API simples usando o Rails.
+Implemente a autenticação usando o Devise.
+-------------------------------------------------------------------------
+
+
+
+**6. Testes em Rails:
+Recursos:
+
+Rails Testing Guide
+RSpec
+
+Exercícios:
+
+Escreva testes unitários e de integração.
+Pratique a utilização do RSpec.
+-------------------------------------------------------------------------
+
+
+**7. JavaScript e Front-end:
+Recursos:
+
+Rails and JavaScript
+Webpacker
+
+Exercícios:
+
+Adicione interatividade com JavaScript.
+Utilize frameworks front-end, como React ou Vue.js.
+-------------------------------------------------------------------------
+
+
+**8. Optimização e Performance:
+Recursos:
+
+Bullet Gem para detecção de N+1 queries
+Rails Performance - Livro sobre otimização em Rails
+
+Exercícios:
+
+Otimizar consultas SQL usando includes e joins.
+Implementar caching para melhorar a performance.
+-------------------------------------------------------------------------
+
+
+**9. Segurança em Rails:
+Recursos:
+
+Rails Security Guide
+Brakeman para análise de segurança
+
+Exercícios:
+
+Pratique evitar injeção de SQL.
+Implemente medidas de segurança, como CSRF tokens.
+-------------------------------------------------------------------------
+
+
+**10. Deploys e Configuração:
+Recursos:
+
+Capistrano para deploys
+12 Factor App
+Exercícios:
+
+Configure deploys automatizados.
+Siga as melhores práticas para ambientes de produção.
+**11. Aprofundamento:
+Recursos:
+
+RailsCasts
+GoRails
+
+Exercícios:
+
+Contribua para projetos open source em Rails.
+Trabalhe em projetos pessoais para aprimorar suas habilidades.
+-------------------------------------------------------------------------
+
+
+**12. Comunidade e Networking:
+Recursos:
+
+Participe de meetups e conferências locais.
+Junte-se a comunidades online, como o Ruby on Rails Forum.
+
+Exercícios:
+
+Compartilhe seu conhecimento escrevendo blogs ou dando palestras.
+Colabore em projetos open source para ganhar experiência prática.
+Lembre-se, a prática constante é fundamental para se tornar um engenheiro
+Ruby on Rails eficiente. Trabalhe em projetos do mundo real, colabore 
+com outros desenvolvedores e esteja sempre atualizado com as melhores práticas da comunidade
