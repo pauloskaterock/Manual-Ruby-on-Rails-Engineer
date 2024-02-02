@@ -92,3 +92,75 @@ end
 # criação e manutenção de código, tornando o desenvolvimento mais eficiente e legível. 
 # Eles desempenham um papel significativo na abordagem de "convenção sobre configuração" 
 # do framework, contribuindo para a produtividade do desenvolvedor.
+
+puts " ------------------------COMO CRIAR SEUS HELPERS----------------------------"
+
+
+# Em Ruby on Rails, você pode criar seus próprios helpers para encapsular lógica de 
+# visualização ou funções comuns que você deseja reutilizar em várias partes de suas views. 
+# Helpers são módulos Ruby que fornecem métodos adicionais para suas views.
+
+# Aqui está um guia passo a passo para criar seus próprios helpers:
+
+# 1. Crie um novo arquivo para o Helper:
+# Dentro do diretório app/helpers, crie um novo arquivo chamado, por exemplo, custom_helpers.rb.
+
+# 2. Defina o Módulo do Helper:
+# Abra o arquivo custom_helpers.rb e defina um módulo que conterá seus métodos de helper. Por exemplo:
+
+
+# app/helpers/custom_helpers.rb
+
+module CustomHelpers
+  def format_data(data)
+    data.strftime("%d/%m/%Y")
+  end
+
+  def truncate_text(text, length)
+    text.length > length ? "#{text[0, length]}..." : text
+  end
+
+  # Adicione outros métodos conforme necessário
+end
+
+
+# 3. Inclua o Módulo no ApplicationHelper:
+# O ApplicationHelper é o principal helper que é incluído automaticamente em todas as views. 
+# Abra o arquivo app/helpers/application_helper.rb e inclua o módulo que você acabou de criar:
+
+# app/helpers/application_helper.rb
+
+module ApplicationHelper
+  include CustomHelpers
+end
+
+# 4. Use os Helpers nas Views:
+# Agora você pode usar os métodos do seu helper em qualquer uma das suas views. Por exemplo:
+
+
+<!-- app/views/exemplo/index.html.erb -->
+
+<h1><%= format_data(Time.now) %></h1>
+<p><%= truncate_text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 20) %></p>
+
+# Dica Adicional:
+
+# Se você tem métodos que são específicos para um controlador, você pode criar um 
+# helper específico para esse controlador. Por exemplo, se você tiver um controlador 
+# chamado PostsController, pode criar um helper chamado PostsHelper para conter 
+# métodos específicos desse controlador.
+
+# Reinicie o Servidor:
+
+# Após criar ou atualizar seus helpers, é uma boa prática reiniciar o servidor 
+# para garantir que as mudanças sejam refletidas:
+
+
+rails server
+
+# Ao seguir esses passos, você pode criar seus próprios helpers 
+# personalizados para melhorar a modularidade e a reutilização de código em suas views.
+
+
+
+
