@@ -1,0 +1,113 @@
+atalhos do vscode
+    
+    O Visual Studio Code (VSCode) possui vários atalhos de teclado que podem acelerar o 
+    seu fluxo de trabalho. Aqui estão alguns dos atalhos mais comuns e úteis:
+    
+    Navegação e Edição:
+
+    Ctrl + P (ou Cmd + P no macOS): Abrir Quick Open (para navegar rapidamente por arquivos).
+    Ctrl + Shift + P (ou Cmd + Shift + P no macOS): Abrir a paleta de comandos.
+    Ctrl + Shift + N (ou Cmd + Shift + N no macOS): Abrir uma nova janela do VSCode.
+    Ctrl + Shift + F (ou Cmd + Shift + F no macOS): Abrir a pesquisa em arquivos.
+    Ctrl + F (ou Cmd + F no macOS): Pesquisar no arquivo atual.
+    Ctrl + Shift + F (ou Cmd + Shift + F no macOS): Pesquisar em todos os arquivos.
+    Ctrl + H (ou Cmd + H no macOS): Substituir.
+    Ctrl + D: Selecionar a próxima ocorrência da palavra atual.
+    Ctrl + U: Desfazer a última seleção.
+    Alt + ↑/↓ (ou Option + ↑/↓ no macOS): Mover a linha atual para cima ou para baixo.
+
+    Navegação no Editor:
+
+    Ctrl + Tab: Navegar entre abas de arquivos abertos.
+    Ctrl + Page Up/Page Down (ou Cmd + Option + Left/Right no macOS): Navegar entre abas de arquivos abertos.
+    Ctrl + B (ou Cmd + B no macOS): Alternar a visibilidade da barra lateral.
+    Ctrl + \: Dividir o editor.
+
+    Terminal:
+
+    Ctrl + `` (ou Cmd + `` no macOS): Alternar o terminal integrado.
+    Ctrl + Shift + `` (ou Cmd + Shift + `` no macOS): Abrir um novo terminal.
+
+    Outros:
+
+    Ctrl + K, Ctrl + S: Salvar todas as alterações.
+    Ctrl + K, Ctrl + W (ou Cmd + K, Cmd + W no macOS): Fechar a janela do editor.
+    Ctrl + K, Ctrl + D: Fechar a pasta do workspace.
+    Ctrl + K, Z (ou Cmd + K, Z no macOS): Alternar para o modo de tela cheia.
+
+    Esses são apenas alguns dos atalhos mais comuns do VSCode. Existem muitos 
+    outros atalhos disponíveis para várias funcionalidades. Você pode explorar 
+    mais atalhos e personalizá-los de acordo com suas preferências 
+    acessando "Preferences" > "Keyboard Shortcuts" no menu do VSCode.
+    
+    User
+    me de mais 100 atalhos do vscode
+
+
+    Claro! Aqui estão mais 100 atalhos de teclado do Visual Studio Code (VSCode):
+    
+    Navegação e Edição:
+
+    Ctrl + G (ou Cmd + G no macOS): Ir para a linha.
+    Ctrl + Shift + O (ou Cmd + Shift + O no macOS): Ir para o símbolo (funções, métodos, etc.).
+    Alt + ←/→ (ou Option + ←/→ no macOS): Navegar para trás/para frente.
+    Ctrl + Shift + ←/→ (ou Cmd + Shift + ←/→ no macOS): Selecionar texto palavra por palavra.
+    Ctrl + Shift + ↑/↓: Mover a linha atual para cima ou para baixo.
+    Alt + Shift + ↓ (ou Option + Shift + ↓ no macOS): Duplicar a linha atual.
+    Alt + Shift + ↑ (ou Option + Shift + ↑ no macOS): Mover a linha atual para cima.
+    Ctrl + X (ou Cmd + X no macOS): Recortar a linha atual.
+    Ctrl + Enter: Inserir linha abaixo.
+    Ctrl + Shift + Enter: Inserir linha acima.
+    Ctrl + Shift + K (ou Cmd + Shift + K no macOS): Excluir linha.
+    Ctrl + / (ou Cmd + / no macOS): Alternar comentário de linha.
+    Shift + Alt + A (ou Shift + Option + A no macOS): Alternar comentário de bloco.
+
+    Seleção de Texto:
+
+    Shift + ↑/↓: Expandir a seleção para cima ou para baixo.
+    Ctrl + Shift + L (ou Cmd + Shift + L no macOS): Selecionar todas as ocorrências da palavra atual.
+    Ctrl + A (ou Cmd + A no macOS): Selecionar tudo.
+    Ctrl + Shift + Space: Expandir a seleção para o escopo mais amplo.
+    Shift + Alt + → (ou Shift + Option + → no macOS): Expandir a seleção para a direita.
+    Shift + Alt + ← (ou Shift + Option + ← no macOS): Expandir a seleção para a esquerda.
+
+    Terminal:
+
+    Ctrl + C: Copiar a seleção para a área de transferência no terminal integrado.
+    Ctrl + V: Colar na linha atual no terminal integrado.
+    Ctrl + ↑/↓: Rolar para cima/para baixo no terminal integrado.
+
+    Pesquisa:
+
+    Ctrl + Shift + F10 (ou Cmd + Shift + F10 no macOS): Avançar para a próxima correspondência durante a pesquisa.
+    Ctrl + Shift + F9 (ou Cmd + Shift + F9 no macOS): Retroceder para a correspondência anterior durante a pesquisa.
+
+    Visualização e Navegação de Arquivos:
+
+    Ctrl + P (ou Cmd + P no macOS) e digitar o nome do arquivo: Abrir um arquivo por nome.
+    Ctrl + Shift + E (ou Cmd + Shift + E no macOS): Alternar a visibilidade da barra lateral do explorador de arquivos.
+    Ctrl + B (ou Cmd + B no macOS): Alternar a visibilidade da barra lateral do explorador de arquivos.
+
+    Visualização e Edição de Abas:
+
+    Ctrl + 1-9 (ou Cmd + 1-9 no macOS): Ir para a aba na posição especificada.
+    Ctrl + Tab (ou Cmd + Tab no macOS): Alternar para a aba seguinte.
+    Ctrl + Shift + Tab (ou Cmd + Shift + Tab no macOS): Alternar para a aba anterior.
+    Ctrl + W (ou Cmd + W no macOS): Fechar a aba atual.
+    Ctrl + K, Ctrl + W (ou Cmd + K, Cmd + W no macOS): Fechar todas as abas.
+
+    Formatação e Indentação:
+
+    Alt + Shift + F (ou Option + Shift + F no macOS): Formatar o documento.
+    Tab: Indentar a linha atual.
+    Shift + Tab: Desindentar a linha atual.
+
+    Trabalhando com Arquivos:
+
+    Ctrl + N (ou Cmd + N no macOS): Abrir um novo arquivo.
+    Ctrl + O (ou Cmd + O no macOS): Abrir um arquivo existente.
+    `Ctrl +
+    
+    
+    
+    

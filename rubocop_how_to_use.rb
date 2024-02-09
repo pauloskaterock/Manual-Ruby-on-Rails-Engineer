@@ -7,7 +7,7 @@
 # Você pode instalar o RuboCop como uma gem usando o seguinte comando no terminal:
 
 
- gem install rubocop
+ gem install "rubocop"
 # Ou, se estiver usando o Bundler em seu projeto Ruby, adicione o RuboCop ao seu arquivo Gemfile:
 
 
