@@ -1,0 +1,65 @@
+alguns dos comandos mais comuns que você pode usar com o RSpec:
+
+Executar todos os testes:
+
+    bundle exec rspec
+
+
+Executar um teste específico:
+
+    bundle exec rspec path/to/spec_file.rb
+
+
+
+Executar todos os testes em um diretório específico:
+
+    bundle exec rspec path/to/spec/directory
+
+
+Executar um teste específico em um arquivo específico:
+
+    bundle exec rspec path/to/spec_file.rb:line_number
+
+
+Executar testes com uma tag específica:
+
+
+    bundle exec rspec --tag tag_name
+
+
+Executar testes e mostrar a saída em formato de documentação:
+
+
+    bundle exec rspec --format documentation
+
+    
+Executar testes e mostrar a saída em formato de progresso:
+
+    bundle exec rspec --format progress
+
+Executar testes e gerar um relatório de cobertura de código:
+
+
+    bundle exec rspec --format documentation --format coverage
+
+Executar testes e gerar um relatório HTML de cobertura de código:
+
+
+    bundle exec rspec --format html --out coverage/index.html
+
+
+Executar testes e parar na primeira falha:
+
+    bundle exec rspec --fail-fast
+
+
+Executar testes e mostrar o tempo de execução de cada exemplo:
+
+
+    bundle exec rspec --profile
+
+
+Executar testes e continuar mesmo após falhas:
+
+
+    bundle exec rspec --keep-going
