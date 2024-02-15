@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox e Radio Button</title>
+</head>
+<body>
+    <h3> 
+        Neste exemplo:
+
+Checkbox: Cada checkbox pode ser selecionado ou desmarcado independentemente das outras opções. Os checkboxes são úteis quando o usuário pode selecionar várias opções.<br>
+Radio Button: Os radio buttons são mutuamente exclusivos, ou seja, apenas uma opção pode ser selecionada de cada vez. Eles são úteis quando o usuário deve selecionar apenas uma opção entre várias.<br>
+Ambos os elementos <input> são envolvidos em <label> para associar o rótulo ao campo de entrada, o que melhora a acessibilidade. O atributo for do <label> tem o mesmo valor que o atributo id do <input> correspondente.<br> Isso permite que os usuários cliquem no texto do rótulo para selecionar/desmarcar a caixa de seleção ou o botão de rádio.
+    </h3>
+
+    <h2>Checkbox:</h2>
+    <label for="check1">
+        <input type="checkbox" id="check1" name="check1" value="opcao1"> Opção 1
+    </label>
+    <br>
+    <label for="check2">
+        <input type="checkbox" id="check2" name="check2" value="opcao2"> Opção 2
+    </label>
+    <br>
+    <label for="check3">
+        <input type="checkbox" id="check3" name="check3" value="opcao3"> Opção 3
+    </label>
+
+    <h2>Radio Button:</h2>
+    <label for="radio1">
+        <input type="radio" id="radio1" name="radio" value="opcao1"> Opção 1
+    </label>
+    <br>
+    <label for="radio2">
+        <input type="radio" id="radio2" name="radio" value="opcao2"> Opção 2
+    </label>
+    <br>
+    <label for="radio3">
+        <input type="radio" id="radio3" name="radio" value="opcao3"> Opção 3
+    </label>
+
+</body>
+</html>

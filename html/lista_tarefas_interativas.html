@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    
+    <input type="text" id="taskInput" placeholder="Nova Tarefa">
+    <button onclick="addTask()">Adicionar</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+            var taskList = document.getElementById("taskList");
+
+            if (taskInput.value.trim() !== "") {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(taskInput.value));
+                taskList.appendChild(li);
+                taskInput.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

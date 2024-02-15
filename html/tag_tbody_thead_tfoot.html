@@ -1,0 +1,51 @@
+As tags <tbody>, <thead> e <tfoot> são usadas para organizar o conteúdo de uma tabela HTML em seções específicas. Aqui está uma explicação sobre cada uma delas:
+
+    <thead> (Table Head):
+    A tag <thead> é usada para agrupar as linhas que contêm os cabeçalhos das colunas da tabela. Geralmente, é usada para melhorar a semântica da tabela e pode ser útil ao aplicar estilos ou ao acessar as células do cabeçalho via JavaScript.
+    
+    Exemplo:
+    
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cabeçalho da Coluna 1</th>
+                <th>Cabeçalho da Coluna 2</th>
+                <th>Cabeçalho da Coluna 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Corpo da tabela -->
+        </tbody>
+        <tfoot>
+            <!-- Rodapé da tabela -->
+        </tfoot>
+    </table>
+    <tbody> (Table Body):
+    A tag <tbody> é usada para agrupar as linhas que contêm os dados da tabela. Geralmente, é a parte principal da tabela que contém os dados reais que serão exibidos aos usuários.
+    
+    <tfoot> (Table Foot):
+    A tag <tfoot> é usada para agrupar as linhas que contêm informações de rodapé da tabela, como totais ou resumos. Geralmente, é usado para fornecer informações de rodapé que se aplicam a toda a tabela.
+    
+    Exemplo:
+    
+    <br>
+    <table border="1">
+        <thead>
+            <!-- Cabeçalhos das colunas -->
+        </thead>
+        <tbody>
+            <!-- Corpo da tabela -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+        </tfoot>
+    </table>
+    Importante:
+    Enquanto <thead> e <tfoot> são opcionais, <tbody> é uma parte crucial de uma tabela e pode ser omitida, mas é uma boa prática incluí-la para fins de clareza e semântica.
+    A ordem em que as seções da tabela são declaradas (ou seja, <thead>, <tbody>, <tfoot>) não afeta a aparência visual da tabela, mas é uma prática comum declará-las nessa ordem para consistência e legibilidade do código.
+    Essas tags ajudam a organizar o conteúdo da tabela em diferentes seções, facilitando a manipulação, estilização e acessibilidade da tabela em páginas da web.

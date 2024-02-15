@@ -1,0 +1,57 @@
+No HTML, a tag <label> é usada para associar um rótulo a um elemento de formulário, 
+como <input>, <select>, <textarea>, etc. Isso melhora a acessibilidade, pois os 
+usuários podem clicar no rótulo para focar ou selecionar o campo de entrada correspondente. 
+Existem diferentes tipos de rótulos dependendo do tipo de elemento de formulário ao qual estão associados. 
+Aqui estão alguns exemplos:
+
+Label para Input de Texto:
+
+
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome">
+Label para Input de Senha:
+
+
+<label for="senha">Senha:</label>
+<input type="password" id="senha" name="senha">
+Label para Input de E-mail:
+
+
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email">
+Label para Input de Número:
+
+
+<label for="idade">Idade:</label>
+<input type="number" id="idade" name="idade">
+Label para Input de Checkbox:
+
+
+<label for="aceito">Aceito os termos e condições</label>
+<input type="checkbox" id="aceito" name="aceito">
+Label para Input de Radio:
+
+
+<fieldset>
+    <legend>Escolha uma opção:</legend>
+    <label for="opcao1">Opção 1</label>
+    <input type="radio" id="opcao1" name="opcao">
+
+    <label for="opcao2">Opção 2</label>
+    <input type="radio" id="opcao2" name="opcao">
+</fieldset>
+Label para Input de Arquivo:
+
+
+<label for="arquivo">Escolher um arquivo:</label>
+<input type="file" id="arquivo" name="arquivo">
+Label para Textarea:
+
+
+<label for="comentario">Comentário:</label>
+<textarea id="comentario" name="comentario"></textarea>
+
+
+Lembrando que o atributo for no <label> deve ter o mesmo valor que o 
+atributo id no elemento de formulário associado. O uso adequado de rótulos 
+ajuda a melhorar a usabilidade e a acessibilidade em páginas da web.
