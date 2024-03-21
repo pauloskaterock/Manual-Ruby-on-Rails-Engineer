@@ -1,0 +1,31 @@
+Claro, o Manifesto Ágil é um conjunto de princípios que orientam o desenvolvimento de software ágil. Aqui estão resumidamente os 12 princípios do Manifesto Ágil:
+
+Satisfação do cliente: Priorize a satisfação do cliente entregando continuamente software de valor.
+
+Mudanças bem-vindas: Aceite mudanças nos requisitos, mesmo tardias no desenvolvimento, para fornecer vantagem competitiva ao cliente.
+
+Entrega frequente: Entregue software funcional de forma contínua, com preferência por períodos mais curtos.
+
+Colaboração entre equipe e cliente: Colabore diariamente com os clientes e envolva-os no processo de desenvolvimento.
+
+Motivação da equipe: Construa projetos em torno de indivíduos motivados. Dê-lhes o ambiente e o suporte necessário e confie que farão o trabalho.
+
+Comunicação face a face: A forma mais eficiente e eficaz de transmitir informações é através de uma conversa cara a cara.
+
+Progresso medido pelo software funcionando: O progresso é medido pela entrega de software funcional.
+
+Desenvolvimento sustentável: Mantenha um ritmo constante de desenvolvimento indefinidamente, evitando sobrecarregar a equipe.
+
+Excelência técnica: Atenção contínua à excelência técnica e ao bom design aumenta a agilidade.
+
+Simplicidade: A arte de maximizar a quantidade de trabalho não realizado é essencial.
+
+Autogestão das equipes: As melhores arquiteturas, requisitos e designs emergem de equipes auto-organizadas.
+
+Reflexão e ajuste contínuos: Em intervalos regulares, a equipe reflete sobre como se tornar mais eficaz e ajusta seu comportamento de acordo.
+
+Estes princípios fundamentam a abordagem ágil no desenvolvimento de software, enfatizando a adaptação contínua, a entrega de valor e a colaboração entre equipe e cliente.
+
+
+
+
