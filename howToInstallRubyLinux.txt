@@ -1,0 +1,92 @@
+Linux
+Etapa 1: Instale atualizações, pacotes e bibliotecas
+Antes de podermos instalar o Ruby, precisamos instalar alguns pacotes básicos.
+
+Passo 1.1: Abra o terminal
+Usaremos o terminal para instalar todos os programas.
+
+Se você estiver usando Ubuntu ou Xubuntu, pressione Ctrl+ Alt+ Tpara abrir o terminal. (Isso pode funcionar em outras distribuições Linux; você terá que tentar!)
+
+Dica rápida: No Linux , você pode copiar do terminal com Ctrl++ e colar Shiftcom ++ .CCtrlShiftV
+
+Etapa 1.2: Atualizar Linux
+O resto da instalação ocorrerá dentro da janela do terminal.
+
+Primeiro, precisamos ter certeza de que sua distribuição Linux está atualizada. Execute esses comandos um por um. Como esses comandos usam sudo, você terá que inserir sua senha para que eles sejam executados. Ao digitar sua senha, você pode não receber nenhum feedback visual, mas tenha certeza de que sua senha está sendo digitada. Quando terminar de digitar sua senha, pressione Enter.
+
+sudo apt update
+sudo apt upgrade
+Quando solicitado, pressione Ye depois Enter.
+
+Etapa 1.3: Instalar pacotes e bibliotecas
+Em seguida, você precisa instalar alguns pacotes necessários que não vêm pré-instalados. Certifique-se de copiar e colar este comando.
+
+sudo apt install gcc make libssl-dev libreadline-dev zlib1g-dev libsqlite3-dev libyaml-dev
+Quando solicitado, pressione Ye depois Enter. Você pode ou não precisar digitar sua senha após pressionar Enter.
+
+Passo 2: Instale Ruby
+Agora você está pronto para instalar o Ruby. Usaremos uma ferramenta chamada rbenv, que facilita a instalação e o gerenciamento de versões Ruby.
+
+Etapa 2.1: Instale o rbenv
+Primeiro, você precisa clonar o repositório rbenv.
+
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+A seguir, adicionaremos alguns comandos para permitir que o rbenv funcione corretamente. Podemos usar o echocomando Linux para facilitar.
+
+Execute esses comandos um por um em sequência. Eles não fornecerão nenhuma saída se forem feitos corretamente. Novamente, certifique-se de copiar e colar esses comandos.
+
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exit
+Depois de executar o comando final exit, você precisará fechar todos os terminais abertos e abrir um novo terminal (consulte a Etapa 1.1 acima).
+
+Em seguida, você precisa instalar ruby-buildpara ajudar a compilar os binários Ruby. Execute estes comandos no terminal para criar um diretório para o plugin ruby-build e depois baixe-o para o diretório apropriado.
+
+mkdir -p "$(rbenv root)"/plugins
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+Finalmente, corra
+
+rbenv -v
+do seu terminal para verificar se rbenvfoi instalado corretamente. Você deve obter uma saída com um número de versão semelhante a este:
+
+rbenv 1.2.0-14-gc6cc0a1
+Se você não obtiver nenhum número de versão (qualquer coisa que não comece com rbenv 1...), peça ajuda na sala de bate-papo do Projeto Odin .
+
+Etapa 2.2: Instale Ruby
+Finalmente chegou a hora de instalar Ruby usando rbenv!
+
+Dentro do terminal, execute este comando:
+
+rbenv install 3.2.2 --verbose
+Este comando levará de 10 a 15 minutos para ser concluído. A --verbosebandeira mostrará o que está acontecendo para que você tenha certeza de que não ficou presa. Enquanto ele é instalado, aproveite para assistir a este vídeo ou para pegar um copo d'água.
+
+Você pode receber esta mensagem de erro:
+
+ruby-build: definition not found: x.x.x
+
+See all available versions with `rbenv install --list'.
+
+If the version you need is missing, try upgrading ruby-build:
+
+  git -C /home/itorja/.rbenv/plugins/ruby-build pull
+Nesse caso, executamos o comando sugerido:
+
+git -C "$(rbenv root)"/plugins/ruby-build pull
+Depois que o Ruby estiver instalado, você precisará informar ao rbenv qual versão usar por padrão. Dentro do terminal, digite:
+
+rbenv global 3.2.2
+Então,
+
+ruby -v
+O comando acima deve retornar algo semelhante a isto:
+
+ruby 3.2.2pxx (20xx-xx-xx revision xxxxx) [x86_64-linux]
+onde x representa a versão disponível no momento em que você instalou o Ruby.
+
+Bom trabalho! Dê tapinhas nas costas! A parte difícil já foi feita e é hora de passar para a próxima lição!
+
+
+Extras
+Se você estiver usando o Visual Studio Code como seu IDE, poderá instalar a extensão “Ruby LSP”, que fornecerá destaque semântico e suporte à formatação. Isto é opcional, mas é uma instalação rápida; vá até a aba “Extensões” no VSC ( Ctrl+ Shift+ X), pesquise “Ruby LSP” e clique em instalar na primeira. Parabéns, a extensão agora está instalada (você também pode desinstalar a extensão aqui).
+
+Se você estiver usando um IDE diferente, uma pesquisa rápida no Google, como “Extensões de programação Ruby para (seu IDE aqui)”, deverá fornecer os recursos para começar. Extensões de suporte gratuitas podem ajudar a tornar sua programação mais tranquila, e há inúmeras extensões para todas as linguagens (não apenas Ruby).

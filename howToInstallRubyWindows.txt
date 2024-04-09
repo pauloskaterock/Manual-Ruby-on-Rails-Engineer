@@ -1,0 +1,34 @@
+RubyInstaller
+Se você está no Windows, existe um ótimo projeto para ajudá-lo a instalar o Ruby: RubyInstaller. Ele te dá tudo o que você precisa para configurar um ambiente de desenvolvimento em Ruby completo no Windows.
+
+Apenas baixe, rode e está pronto!
+
+RailsInstaller e Ruby Stack
+Se você está instalando o Ruby para usar o Ruby on Rails, você pode usar os seguintes instaladores:
+
+RailsInstaller, que usa o RubyInstaller, mas te dá ferramentas adicionais que ajudam no desenvolvimento com Rails. Suporta o OS X e o Windows.
+Bitnami Ruby Stack, que fornece um ambiente de desenvolvimento completo para Rails. Suporta macOS, Linux, Windows, máquinas virtuais e imagens na nuvem.
+Gerenciadores
+Muitos programadores Ruby utilizam gerenciadores para organizar múltiplas versões do Ruby. Eles conferem várias vantagens, mas não são suportados oficialmente. No entanto, suas comunidades são muito prestativas.
+
+chruby
+O chruby permite que você alterne entre múltiplos Rubies. O chruby pode gerenciar os Rubies instalados através do ruby-install ou até mesmo compilados a partir do código fonte.
+
+rbenv
+O rbenv permite que você gerencie múltiplas instalações do Ruby. Ele não suporta a instalação do Ruby, mas existe um plugin popular chamado ruby-build para isso. Ambas estas ferramentas estão disponíveis para macOS, Linux ou outros sistemas operacionais do tipo UNIX.
+
+RVM (“Ruby Version Manager”)
+O RVM permite que você instale e gerencie múltiplas instalações do Ruby em seu sistema. Ele também permite gerenciar diferentes gemsets. Também está disponível para macOS, Linux ou outros sistemas operacionais do tipo UNIX.
+
+uru
+O Uru é uma ferramenta de linha de comando leve e multi-plataforma, que te ajuda a usar múltiplas versões do Ruby em sistemas macOS, Linux e Windows.
+
+Compilando a Partir do Código Fonte
+É claro, você pode instalar o Ruby a partir do código fonte. Baixe e descompacte o arquivo, e então apenas faça isso:
+
+$ ./configure
+$ make
+$ sudo make install
+Por padrão isso instalará o Ruby em /usr/local. Para alterar, informe a opção --prefix=DIR para o script ./configure.
+
+No entanto, usar as ferramentas de terceiros ou os gerenciadores de pacotes pode ser uma ideia melhor, porque o Ruby instalado não será gerenciado por nenhuma ferramenta.
