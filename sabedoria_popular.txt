@@ -1,0 +1,11 @@
+use todas as letras minusculas em nomes de variaveis.
+evite numeros.
+separe as palavras com sublinhados
+    my_rank = 1
+esse estilo é chamado serpente
+
+-------------------------------------------------------------------------------------
+
+deixe os parenteses de fora de uma chamada de metodose não houver argumentos
+
+--------------------------------------------------------------------------------------
