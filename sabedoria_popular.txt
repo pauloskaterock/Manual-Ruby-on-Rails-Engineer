@@ -9,3 +9,21 @@ esse estilo é chamado serpente
 deixe os parenteses de fora de uma chamada de metodose não houver argumentos
 
 --------------------------------------------------------------------------------------
+
+é valido usar else e elsif juntamente com unless no ruby:
+
+unless light == "red"
+    puts "Go"
+ else
+    puts "Stop"
+end
+
+Mas é muito dificil de ler, se voce precisar de uma clausula else, utilize if para a clausula principal em seu lugar
+
+if light == "red"
+    puts "Go"
+ else
+    puts "Stop"
+end
+
+-----------------------------------------------------------------------------------
