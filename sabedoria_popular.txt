@@ -27,3 +27,4 @@ if light == "red"
 end
 
 -----------------------------------------------------------------------------------
+nome s de metodos devem estar no estiloserpente uma ou mais palavras minusculas separadas por sublinhados
