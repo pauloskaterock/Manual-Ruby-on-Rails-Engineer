@@ -28,3 +28,6 @@ end
 
 -----------------------------------------------------------------------------------
 nome s de metodos devem estar no estiloserpente uma ou mais palavras minusculas separadas por sublinhados
+------------------------------------------------------------------------------------
+
+nomes de classe em ruby devme comecar com uma letra maiuscula seguido por letras minusculas
