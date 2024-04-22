@@ -31,3 +31,23 @@ nome s de metodos devem estar no estiloserpente uma ou mais palavras minusculas 
 ------------------------------------------------------------------------------------
 
 nomes de classe em ruby devme comecar com uma letra maiuscula seguido por letras minusculas
+
+
+---------------------------------------------------------------------------------------
+
+O nome de um metodo leitor de atributo geralmente deve coincidir com o nome da variavel de instancia a partir da qual ele a le (sem o simbolo @, naturalmente)
+
+
+def tail_length
+    @tail_length
+end
+
+
+
+O mesmo se plica aos metodos gravadores de atributo mas voce deve adicionar um simbolo = ao final do nome
+
+def tail_length=(value)
+    @tail_length = value
+end
+
+-----------------------------------------------------------------------------------------------------
