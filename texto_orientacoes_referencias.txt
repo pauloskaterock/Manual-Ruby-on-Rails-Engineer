@@ -1,0 +1,71 @@
+Introdução ao Ruby - Texto com orientações, referências e código
+Recurso Ruby:
+
+www.ruby-lang.org
+
+Para visualizar o diretório atual:
+
+senha
+
+Para criar um diretório:
+
+mkdir nome_do_diretório
+
+Para mover para um diretório:
+
+cd nome_do_diretório
+
+**Este comando acima só funcionará se o nome_do_diretório estiver listado como uma das pastas dentro do diretório atual
+
+Para listar todos os diretórios e arquivos no diretório atual:
+
+eu
+
+Para listar todos os diretórios e arquivos no diretório atual, incluindo arquivos ocultos:
+
+é -a
+
+Para sair de um diretório (1 nível acima na árvore):
+
+cd ..
+
+Para imprimir hello world no console ou na saída:
+
+puts "Hello World!"
+
+Em resposta, você pode simplesmente clicar no botão play. Mas em cloud9, AWS cloud9 ou em seu ambiente local, primeiro certifique-se de estar no diretório que inclui o arquivo onde você escreveu o programa hello world e, em seguida, execute-o usando o comando abaixo (presumindo que o nome do arquivo seja playground.rb)
+
+Na linha de comando:
+
+ruby playground.rb
+
+Para criar uma variável chamada hello e imprimir o valor de hello:
+
+olá = "Olá, mundo!" 
+coloca olá
+A seguir está a estrutura de um método em Ruby, coisas a serem lembradas são as palavras-chave def e end:
+
+def nome do método
+  #conteúdo do método
+fim
+Para escrever um método para dizer olá, mundo, você pode escrever:
+
+def diga_olá
+  coloca "Olá, mundo!"
+fim
+Em seguida, chame o método simplesmente referenciando o nome:
+
+diga olá
+
+Método hello atualizado:
+
+def dizer_olá ( coisa_para_dizer )
+  coloca coisa_para_dizer
+fim
+Para fazer esse método dizer coisas:
+
+say_hello "Meu nome é Mashrur"
+
+say_hello "Bem-vindo ao curso completo para desenvolvedores Ruby on Rails"
+
+say_hello "Olha só, isso imprime tudo o que eu quiser"

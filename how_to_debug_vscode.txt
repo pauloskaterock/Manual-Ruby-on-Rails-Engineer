@@ -1,0 +1,50 @@
+Depurar no Visual Studio Code é bastante fácil e eficiente, especialmente com a integração de várias linguagens e frameworks. Aqui está um guia rápido sobre como você pode configurar e usar o depurador no VS Code:
+
+Configuração Inicial:
+
+Instale as Extensões Necessárias:
+
+Certifique-se de ter as extensões necessárias instaladas para a linguagem ou framework que você está usando. Por exemplo, se estiver desenvolvendo em Ruby on Rails, você pode instalar a extensão "Ruby" e "Ruby Solargraph".
+
+Configurações de Depuração:
+
+Abra o arquivo no qual deseja depurar e clique na guia "Run and Debug" (Executar e Depurar) na barra lateral esquerda (ou pressione Ctrl + Shift + D). Selecione "Add Configuration" (Adicionar Configuração) e escolha a configuração apropriada para a sua linguagem e ambiente.
+
+Iniciando uma Sessão de Depuração:
+
+Defina Pontos de Interrupção:
+
+Clique na margem esquerda do editor para definir pontos de interrupção onde deseja parar a execução do programa.
+
+Inicie a Depuração:
+
+Pressione F5 ou clique em "Start Debugging" (Iniciar Depuração) na parte superior da janela do VS Code.
+
+Navegação e Inspeção:
+
+Controles de Depuração:
+
+Durante a depuração, você terá acesso a controles como "Step Over" (Passar por cima), "Step Into" (Passar para dentro) e "Step Out" 
+(Sair do Método).
+
+Visualização de Variáveis:
+
+Você pode visualizar o valor das variáveis ​​no painel "Variables" (Variáveis) enquanto depura.
+
+Console de Depuração:
+
+Use o console de depuração para imprimir mensagens ou avaliar expressões durante a execução.
+
+Configurações Avançadas:
+
+Configurações de Lançamento:
+
+Você pode ajustar as configurações de lançamento no arquivo launch.json para controlar o comportamento do depurador.
+
+Execução Condicionada:
+
+Você pode definir condições para os pontos de interrupção e para as etapas de execução no código.
+
+Essas são as etapas básicas para depurar no Visual Studio Code. À medida que você se familiariza com o processo, poderá explorar 
+
+recursos mais avançados para depuração específica de linguagem e cenários.
