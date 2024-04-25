@@ -1,0 +1,493 @@
+71 perguntas da entrevista sobre Ruby on Rails para fazer aos desenvolvedores.
+
+From Website: Testgorilla
+
+
+https://www.testgorilla.com/blog/ruby-on-rails-interview-questions/
+
+25 perguntas da entrevista para iniciantes em Ruby on Rails
+Começaremos com 25 perguntas de entrevista para iniciantes em Ruby on Rails que você pode fazer para avaliar o conhecimento de candidatos juniores que estão entrando na profissão.
+
+Explique o que significa ORM em Ruby on Rails.
+
+Explique o que “rake” significa em Ruby on Rails.
+
+Explique o que é Ruby on Rails.
+
+O que significa “migração Rails”?
+
+O que o subdiretório app/controllers faz?
+
+De que forma o Ruby on Rails é limitado?
+
+Explique o que load faz em Ruby on Rails.
+
+Explique o que require faz em Ruby on Rails.
+
+O que é um auxiliar em Ruby on Rails?
+
+Como você usa ajudantes em Ruby on Rails?
+
+Descreva três componentes do Rails.
+
+Explique o que é “andaime”.
+
+Quais são as vantagens do andaime em Ruby on Rails?
+
+O que significa MVC?
+
+Como funciona o MVC?
+
+Explique quais símbolos os desenvolvedores usam para definir variáveis, variáveis ​​globais e variáveis ​​de classe.
+
+Quais são os benefícios de usar Ruby on Rails?
+
+O que é uma “joia” em Ruby on Rails?
+
+O que é um plugin em Ruby on Rails?
+
+Explique as diferenças entre gems e plugins em Ruby on Rails.
+
+O que significa zero ?
+
+O que significa falso ?
+
+Explique as diferenças entre nil e false em Ruby on Rails.
+
+Quais habilidades os desenvolvedores precisam para usar Ruby on Rails?
+
+-------------------------------------------------------------------------------------------------------
+
+Explique o que delete faz em Ruby on Rails.
+
+5 principais perguntas e respostas da entrevista sobre Ruby on Rails para iniciantes
+
+Aqui estão cinco perguntas críticas da entrevista sobre Ruby on Rails para iniciantes da seção acima e alguns exemplos de respostas que você deve ouvir de seus candidatos.
+
+1. Explique o que é Ruby on Rails.
+Ruby on Rails é uma estrutura de aplicativo de código aberto do lado do servidor escrita na linguagem de programação orientada a objetos Ruby. Tem muitas semelhanças com Python . Desenvolvedores qualificados usam essa estrutura para construir sites e aplicativos da web.
+
+2. O que significa migração Rails?
+Os candidatos devem estar cientes de que os desenvolvedores usam migrações para alterar bancos de dados usando uma abordagem estruturada. Eles podem mencionar que os desenvolvedores podem descrever as mudanças que fizeram com a linguagem de programação Ruby e rastrear as migrações que já executaram com o Active Record.
+
+3. O que é uma joia em Ruby on Rails?
+Uma gema em Ruby on Rails é uma biblioteca que os desenvolvedores usam para adicionar funcionalidades a um programa sem escrever código, uma vez que as gemas contêm código reutilizável. As Gems ajudam os desenvolvedores, permitindo-lhes implementar uma ampla gama de recursos sem precisar codificá-los do zero, tornando o desenvolvimento mais eficiente. 
+
+4. Explique o que delete faz em Ruby on Rails.
+Ao responder a esta pergunta, os candidatos não devem se confundir entre delete e destroy . Eles devem ser capazes de explicar que delete exclui um registro, enquanto destroy exclui um registro e executa qualquer retorno de chamada no modelo.
+
+5. Quais habilidades os desenvolvedores precisam para usar Ruby on Rails?
+Os desenvolvedores precisam de habilidades técnicas e interpessoais para usar Ruby on Rails com eficiência. Algumas das habilidades que seus candidatos podem mencionar incluem:
+
+Conhecimento da linguagem de programação Ruby on Rails
+
+Habilidades de validação e teste
+
+Conhecimento de desenvolvimento front-end
+
+Conhecimento de bancos de dados
+
+--------------------------------------------------------------------------------------------------
+
+21 perguntas intermediárias da entrevista sobre Ruby on Rails
+
+Esta seção lista 21 perguntas intermediárias da entrevista sobre Ruby on Rails que você pode fazer a candidatos de nível médio para avaliar suas habilidades.
+
+
+O que a coleta de lixo faz no Ruby on Rails?
+
+Descreva o que são métodos destrutivos.
+
+O que é um filtro em Ruby on Rails?
+
+Explique o que são observadores em Ruby on Rails.
+
+Explique o que são retornos de chamada em Ruby on Rails.
+
+Explique o que são arreios.
+
+O que são luminárias em Ruby on Rails?
+
+Explique o que é um símbolo em Ruby on Rails.
+
+Explique o que é uma string em Ruby on Rails.
+
+Explique o que destroy faz em Ruby on Rails.
+
+Explique o que é um proc.
+
+O que é um Gemfile em Ruby on Rails?
+
+Explique o que count faz em Ruby on Rails.
+
+Explique o que o comprimento faz no Ruby on Rails.
+
+Explique o que o tamanho faz no Ruby on Rails.
+
+O que significa “controladores magros, modelos magros”?
+
+Descreva algumas estruturas que os desenvolvedores usam para trabalhos em segundo plano.
+
+Explique quais blocos estão em Ruby on Rails.
+
+Explique o que é a Spring.
+
+Explique o que são inicializadores em Ruby on Rails.
+-------------------------------------------------------------------------------------------------
+
+5 principais perguntas e respostas intermediárias da entrevista sobre Ruby on Rails
+Aqui estão cinco das perguntas intermediárias mais importantes da entrevista sobre Ruby on Rails da seção acima e exemplos de respostas para ouvir de seus candidatos.
+
+1. O que significa “controladores magros, modelos magros”?
+“Controladores magros, modelos magros” é um princípio que os desenvolvedores devem usar quando sua base de código crescer. Em situações como essas, modelos gordos podem ser difíceis de gerenciar, então esse princípio lembra os desenvolvedores de manterem seus modelos “magros”.
+
+2. Explique o que count faz em Ruby on Rails.
+O método count executa consultas SQL para contar quantos registros existem. É útil quando o número de registros no banco de dados mudou. 
+
+3. Explique o que o comprimento faz no Ruby on Rails.
+O método length retorna o número de itens que estão atualmente em uma coleção na memória. É diferente de count porque o método não realiza uma transação no banco de dados. Também pode ser usado para contar quantos caracteres existem em uma string.
+
+4. Explique o que o tamanho faz no Ruby on Rails.
+Os candidatos devem reconhecer que o método size executa a mesma ação que o método length e que é um alias.
+
+5. Explique o que é a Spring.
+Os desenvolvedores usam o Spring como um pré-carregador de aplicativos para acelerar o desenvolvimento. Eles podem usá-lo para manter o aplicativo em execução em segundo plano ao executar testes, tarefas de rake ou migrações. Com o Spring, os desenvolvedores não precisam reiniciar o servidor ao fazer alterações.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+25 perguntas avançadas da entrevista sobre Ruby on Rails 
+Nesta seção, você encontrará 25 perguntas avançadas de entrevistas sobre Ruby on Rails que você pode fazer a candidatos de nível sênior para avaliar seus conhecimentos.
+
+imagem mostrando perguntas avançadas da entrevista sobre Ruby on Rails 
+Explique o que é ActiveJob.
+
+Quando você deve usar o ActiveJob?
+
+Explique o que são Parâmetros Fortes.
+
+Explique quais são as convenções de nomenclatura no Rails.
+
+Ruby suporta herança múltipla?
+
+Ruby suporta herança única?
+
+Dê um exemplo de filtro em Ruby on Rails.
+
+Explique o que são localizadores dinâmicos.
+
+Como você usaria dois bancos de dados para um aplicativo?
+
+Explique o que é um mecanismo Rails.
+
+Explique o que é um pipeline de ativos.
+
+Ruby é uma linguagem flexível? Por que ou por que não?
+
+O que é Active Record em Ruby on Rails?
+
+Explique se os métodos de instância são privados ou públicos.
+
+Como o Ruby on Rails é semelhante ao Python?
+
+Qual a diferença entre Ruby on Rails e Python?
+
+Descreva os tipos de associações que os modelos podem ter em Ruby on Rails.
+
+Explique como as variáveis ​​de classe são diferentes das variáveis ​​de instância.
+
+O que é um fechamento em Ruby on Rails?
+
+Explique a diferença entre #equal e #== .
+
+Explique a diferença entre Array#each e Array#map .
+
+Explique a diferença entre levantar / resgatar e lançar / pegar.
+
+O que é um hash em Ruby on Rails?
+
+O que é JSON?
+
+Explique o que é o operador splat.
+
+5 principais perguntas e respostas avançadas da entrevista sobre Ruby on Rails
+Aqui estão cinco perguntas vitais da entrevista avançada sobre Ruby on Rails da seção acima e as respostas que os principais candidatos provavelmente darão.
+
+1. Explique o que é o operador splat.
+Os desenvolvedores usam o operador splat (*) quando passam argumentos para um método, mas não querem especificar quantos argumentos estão passando. Os candidatos podem mencionar que existem dois tipos de operadores de splat – o splat simples (*) e o splat duplo (**).
+
+2. Explique o que é ActiveJob.
+ActiveJob é uma estrutura que os desenvolvedores usam para declarar trabalhos, como limpezas, cobranças e correspondências. Quando os desenvolvedores usam o ActiveJob, seu objetivo é garantir que os aplicativos tenham uma infraestrutura de trabalho. 
+
+3. O que é Hash em Ruby on Rails?
+Candidatos avançados devem ser capazes de explicar que Hash é um tipo de classe Ruby. É um grupo de pares chave/valor que torna mais simples para os desenvolvedores acessar valores por chaves.
+
+4. O que é Active Record em Ruby on Rails?
+Active Record é uma camada de código de mapeamento objeto-relacional. Os desenvolvedores usam o Active Record como uma interface executada entre as tabelas de um banco de dados relacional e o código do programa em Ruby.  
+
+5. Descreva os tipos de associações que os modelos podem ter em Ruby on Rails.
+Os candidatos podem responder a esta pergunta da entrevista sobre Ruby on Rails mencionando que usam associações para criar conexões entre modelos em uma aplicação Rails. Eles podem então explicar que o Active Record suporta três tipos principais de associações:
+
+Um para um : Um relacionamento em que um objeto está vinculado a apenas um outro objeto
+
+Um para muitos : Um relacionamento em que um objeto pode estar relacionado a muitos outros objetos
+
+Muitos para muitos : Um relacionamento no qual uma instância do primeiro tipo de objeto está vinculada a uma ou mais instâncias de um segundo tipo de objeto, e uma instância de um segundo tipo de objeto está vinculada a uma ou mais instâncias do primeiro tipo de objeto
+
+##############################################################################################################################
+
+
+Original Version:
+
+
+https://www.testgorilla.com/blog/ruby-on-rails-interview-questions/
+
+
+
+
+25 beginner Ruby on Rails interview questions
+We’ll start with 25 beginner Ruby on Rails interview questions that you can ask to evaluate the knowledge of junior candidates just entering the profession.
+
+image of beginner Ruby on Rails interview questions
+Explain what ORM means in Ruby on Rails.
+
+Explain what “rake” means in Ruby on Rails.
+
+Explain what Ruby on Rails is.
+
+What is meant by “Rails migration”?
+
+What does the subdirectory app/controllers do?
+
+In what ways is Ruby on Rails limited?
+
+Explain what load does in Ruby on Rails.
+
+Explain what require does in Ruby on Rails.
+
+What is a helper in Ruby on Rails?
+
+How do you use helpers in Ruby on Rails?
+
+Outline three components of Rails.
+
+Explain what “scaffolding” is.
+
+What are the advantages of scaffolding in Ruby on Rails?
+
+What does MVC mean?
+
+How does MVC work?
+
+Explain which symbols developers use to define variables, global variables, and class variables.
+
+What are the benefits of using Ruby on Rails?
+
+What is a “gem” in Ruby on Rails?
+
+What is a plugin in Ruby on Rails?
+
+Explain the differences between gems and plugins in Ruby on Rails.
+
+What does nil mean?
+
+What does false mean?
+
+Explain the differences between nil and false in Ruby on Rails.
+
+Which skills do developers need to use Ruby on Rails?
+
+Explain what delete does in Ruby on Rails.
+
+5 key beginner Ruby on Rails interview questions and answers
+Here are five critical beginner Ruby on Rails interview questions from the section above and some examples of answers that you should listen for from your candidates.
+
+1. Explain what Ruby on Rails is.
+Ruby on Rails is an open-source, server-side application framework that is written in the object-oriented programming language Ruby. It has many similarities to Python. Skilled developers use this framework to build websites and create web applications.
+
+2. What is meant by Rails migration?
+Candidates should be aware that developers use migrations to change databases using a structured approach. They may mention that developers can describe the changes they have made with the Ruby programming language and track the migrations they have already run with Active Record.
+
+3. What is a gem in Ruby on Rails?
+A gem in Ruby on Rails is a library developers use to add functionalities to a program without writing code since the gems contain reusable code. Gems help developers by enabling them to implement a broad range of features without having to code them from scratch, making development more efficient. 
+
+4. Explain what delete does in Ruby on Rails.
+When responding to this question, candidates shouldn’t get confused between delete and destroy. They should be able to explain that delete deletes a record, whereas destroy both deletes a record and executes any callbacks on the model.
+
+5. Which skills do developers need to use Ruby on Rails?
+Developers need both technical and soft skills to use Ruby on Rails efficiently. Some of the skills your candidates may mention include:
+
+Knowledge of the Ruby on Rails programming language
+
+Validation and testing skills
+
+Front-end development knowledge
+
+Knowledge of databases
+
+21 intermediate Ruby on Rails interview questions
+This section lists 21 intermediate Ruby on Rails interview questions that you can ask mid-level candidates to assess their skills.
+
+image showing intermediate Ruby on Rails interview questions
+How do you use nested layouts?
+
+What does garbage collection do in Ruby on Rails?
+
+Describe what destructive methods are.
+
+What is a filter in Ruby on Rails?
+
+Explain what observers are in Ruby on Rails.
+
+Explain what callbacks are in Ruby on Rails.
+
+Explain what harnesses are.
+
+What are fixtures in Ruby on Rails?
+
+Explain what a symbol is in Ruby on Rails.
+
+Explain what a string is in Ruby on Rails.
+
+Explain what destroy does in Ruby on Rails.
+
+Explain what a proc is.
+
+What is a Gemfile in Ruby on Rails?
+
+Explain what count does in Ruby on Rails.
+
+Explain what length does in Ruby on Rails.
+
+Explain what size does in Ruby on Rails.
+
+What does “skinny controllers, skinny models” mean?
+
+Describe some frameworks developers use for background jobs.
+
+Explain what blocks are in Ruby on Rails.
+
+Explain what Spring is.
+
+Explain what initializers are in Ruby on Rails.
+
+5 key intermediate Ruby on Rails interview questions and answers
+Here are five of the most important intermediate Ruby on Rails interview questions from the section above and example answers to listen for from your candidates.
+
+1. What does “skinny controllers, skinny models” mean?
+“Skinny controllers, skinny models” is a principle developers should use when their codebase grows. In situations like these, fat models can get challenging to manage, so this principle reminds developers to keep their models “skinny.”
+
+2. Explain what count does in Ruby on Rails.
+The count method executes SQL queries to count how many records there are. It’s handy when the number of records in the database has changed. 
+
+3. Explain what length does in Ruby on Rails.
+The length method returns the number of items that are currently in a collection in memory. It’s different from count in that the method does not carry out a database transaction. It can also be used to count how many characters are in a string.
+
+4. Explain what size does in Ruby on Rails.
+Candidates should recognize that the size method performs the same action as the length method and that it is an alias.
+
+5. Explain what Spring is.
+Developers use Spring as a preloader for applications to speed up development. They can use it to keep the app running in the background when running tests, rake tasks, or migrations. With Spring, developers don’t have to restart the server when they make changes.
+
+25 advanced Ruby on Rails interview questions 
+In this section, you’ll find 25 advanced Ruby on Rails interview questions you can ask senior-level candidates to evaluate their knowledge.
+
+image showing advanced Ruby on Rails interview questions 
+Explain what ActiveJob is.
+
+When should you use ActiveJob?
+
+Explain what Strong Parameters are.
+
+Explain what naming conventions are in Rails.
+
+Does Ruby support multiple inheritance?
+
+Does Ruby support single inheritance?
+
+Give an example of a filter in Ruby on Rails.
+
+Explain what dynamic finders are.
+
+How would you use two databases for one application?
+
+Explain what a Rails engine is.
+
+Explain what an asset pipeline is.
+
+Is Ruby a flexible language? Why, or why not?
+
+What is Active Record in Ruby on Rails?
+
+Explain whether instance methods are private or public.
+
+How is Ruby on Rails similar to Python?
+
+How is Ruby on Rails different from Python?
+
+Outline the types of associations models can have in Ruby on Rails.
+
+Explain how class variables are different from instance variables.
+
+What is a closure in Ruby on Rails?
+
+Explain the difference between #equal and #==.
+
+Explain the difference between Array#each and Array#map.
+
+Explain the difference between raise/rescue and throw/catch.
+
+What is a Hash in Ruby on Rails?
+
+What is JSON?
+
+Explain what the splat operator is.
+
+5 key advanced Ruby on Rails interview questions and answers
+Here are five vital advanced Ruby on Rails interview questions from the section above and answers top candidates are likely to give.
+
+1. Explain what the splat operator is.
+Developers use the splat operator (*) when they pass arguments to a method but don’t want to specify how many arguments they are passing. Candidates may mention that there are two types of splat operators – the single splat (*) and the double splat (**).
+
+2. Explain what ActiveJob is.
+ActiveJob is a framework that developers use to declare jobs, such as clean-ups, billing charges, and mailings. When developers use ActiveJob, their goal is to ensure that apps have a job infrastructure. 
+
+3. What is a Hash in Ruby on Rails?
+Advanced candidates should be able to explain that a Hash is a type of Ruby class. It’s a group of key/value pairs that makes it simpler for developers to access values by keys.
+
+4. What is Active Record in Ruby on Rails?
+Active Record is an object-relational mapping layer of code. Developers use Active Record as an interface that runs between the tables within a relational database and the program code in Ruby.  
+
+5. Outline the types of associations models can have in Ruby on Rails.
+Candidates may respond to this Ruby on Rails interview question by mentioning that they use associations to create connections between models in a Rails application. They may then explain that Active Record supports three main types of associations:
+
+One-to-one: A relationship in which one object is linked to only one other object
+
+One-to-many: A relationship in which one object can be related to many other objects
+
+Many-to-many: A relationship in which an instance of the first type of object is linked to one or more instances of a second type of object, and an instance of a second type of object is linked to one or more instances of the first type of object
+
+When should you use Ruby on Rails interview questions?
+Use Ruby on Rails interview questions after you have invited candidates to complete a skills test.
+
+Completing the hiring process in this order will:
+
+Enhance objectivity
+
+Reduce time-to-hire metrics
+
+Give you ideas for the interview stage
+
+For which roles can you use Ruby on Rails interview questions?
+In addition to back-end developer positions, some of the roles that you might use Ruby on Rails interview questions for include:
+
+Server developers
+
+Web engineers
+
+Application developers
+
+Ruby on Rails architects
+
+
+
+
