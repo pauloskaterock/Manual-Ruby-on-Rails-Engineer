@@ -16,3 +16,20 @@ pessoa.nome = "Maria"  # Define o valor do atributo nome
 puts pessoa.nome  # Saída: Maria
 
 # No exemplo acima, attr_accessor :nome cria automaticamente métodos nome e nome= que permitem ler e definir o valor do atributo @nome. Isso simplifica muito a definição de atributos comuns em Ruby.
+
+#--------------------------------------------------------------------------------------------
+
+# attr_accessor: Este método cria métodos de leitura e escrita para o atributo especificado.
+
+class Pessoa
+  attr_accessor :nome
+
+  def initialize(nome)
+    @nome = nome
+  end
+end
+
+pessoa = Pessoa.new("João")
+puts pessoa.nome  # Saída: João
+pessoa.nome = "Maria"
+puts pessoa.nome  # Saída: Maria

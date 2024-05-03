@@ -14,3 +14,20 @@ pessoa.nome = "Maria"  # Define o valor do atributo nome
 
 # No exemplo acima, attr_writer :nome cria automaticamente um método nome= que permite definir o valor do atributo @nome, mas não permite lê-lo diretamente.
 
+
+# -------------------------------------------------------------------------------------------
+
+
+# attr_writer: Este método cria apenas um método de escrita para o atributo especificado.
+
+class Pessoa
+  attr_writer :endereco
+
+  def initialize(endereco)
+    @endereco = endereco
+  end
+end
+
+pessoa = Pessoa.new("Rua Principal")
+# puts pessoa.endereco  # Isso causaria um erro, pois não há um método de leitura para endereço
+pessoa.endereco = "Rua Secundária"
