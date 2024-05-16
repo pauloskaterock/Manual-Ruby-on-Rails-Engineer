@@ -1,0 +1,84 @@
+A arquitetura Ruby on Rails (também conhecida como Rails) segue o padrão arquitetural MVC (Model-View-Controller), que é comum em muitos frameworks web modernos. Vou explicar cada componente da arquitetura Rails e como eles interagem entre si:
+
+Model (Modelo):
+
+O modelo é responsável pela manipulação dos dados da aplicação. Ele representa a camada de acesso aos dados do banco de dados.
+Em Rails, os modelos são classes Ruby que geralmente são mapeadas para tabelas no banco de dados relacional.
+Os modelos encapsulam a lógica de negócios da aplicação, incluindo validações, associações entre tabelas e métodos personalizados para realizar operações específicas nos dados.
+Exemplos de operações comuns em modelos incluem criar, ler, atualizar e excluir registros no banco de dados.
+
+View (Visão):
+
+A visão é responsável pela apresentação dos dados aos usuários. Ela representa a camada de interface do usuário (UI) da aplicação.
+Em Rails, as visões são arquivos de template HTML com código embutido Ruby (geralmente usando a sintaxe ERB - Embedded Ruby).
+
+As visões são renderizadas pelo servidor Rails e enviadas para o navegador do usuário como resposta a uma requisição HTTP.
+
+As visões podem incluir HTML, CSS, JavaScript e código Ruby para exibir dinamicamente os dados vindos dos modelos.
+
+Controller (Controlador):
+
+O controlador é responsável por intermediar as interações entre o modelo e a visão. Ele processa as requisições do cliente, solicita os dados necessários aos modelos e decide qual visão deve ser renderizada em resposta a uma requisição.
+Em Rails, os controladores são classes Ruby que herdam de ApplicationController.
+
+Cada método em um controlador geralmente corresponde a uma ação que pode ser realizada pelo usuário, como exibir uma página, criar um novo registro ou atualizar um registro existente.
+
+Os controladores recebem os parâmetros da requisição HTTP, invocam os métodos adequados nos modelos para realizar operações no banco de dados e, em seguida, renderizam a visão apropriada.
+
+Em resumo, a arquitetura Ruby on Rails divide a aplicação em três componentes principais (Model, View, Controller), cada um com responsabilidades específicas. Isso promove uma separação clara de preocupações e facilita o desenvolvimento e a manutenção de aplicações web robustas e escaláveis.
+_____________________________________________________________________________________________________________
+
+
+
+Exemplo Prático: Blog Simples
+
+Suponha que estamos criando um blog simples em Ruby on Rails. Vamos usar a estrutura MVC para organizar nossa aplicação.
+
+Modelo (Model)
+
+# app/models/post.rb
+class Post < ApplicationRecord
+  validates :title, presence: true
+  validates :content, presence: true
+end
+
+Neste exemplo, temos um modelo Post que representa os posts do blog. Ele possui campos como title e content. 
+As validações garantem que os campos title e content não podem ser vazios.
+
+Visão (View)
+
+<!-- app/views/posts/index.html.erb -->
+<h1>Blog</h1>
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <p><%= post.content %></p>
+<% end %>
+
+Nesta visão, estamos iterando sobre todos os posts disponíveis e exibindo seus títulos e conteúdos.
+
+Controlador (Controller)
+
+# app/controllers/posts_controller.rb
+class PostsController < ApplicationController
+  def index
+    @posts = Post.all
+  end
+end
+
+
+Este controlador possui uma ação index que é responsável por buscar todos os posts do banco de dados e 
+passá-los para a visão correspondente.
+
+Resumo do Fluxo de Trabalho:
+
+O navegador do usuário faz uma requisição HTTP para localhost:3000/posts.
+O roteamento do Rails direciona essa requisição para o método index do controlador PostsController.
+O método index do controlador busca todos os posts do banco de dados usando o modelo Post.
+Os posts são passados para a visão correspondente (index.html.erb).
+A visão renderiza o HTML dinâmico com os detalhes dos posts.
+O HTML resultante é enviado de volta para o navegador do usuário como resposta à requisição.
+Isso é apenas um exemplo básico de como a arquitetura Ruby on Rails funciona na prática. 
+Em aplicações reais, você terá mais modelos, controladores e visões, e eles interagirão de 
+maneiras mais complexas para fornecer funcionalidades mais avançadas.
+
+

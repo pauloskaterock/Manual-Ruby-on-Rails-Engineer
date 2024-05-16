@@ -1,0 +1,21 @@
+syntax error, unexpected integer literal
+
+O erro "syntax error, unexpected integer literal" ocorre quando o interpretador do Ruby encontra um número inteiro (integer literal) em um local onde ele não espera. Isso pode acontecer se você tentar usar um número inteiro em um contexto onde apenas um identificador ou operador é esperado, ou se houver um erro de sintaxe em geral.
+
+Por exemplo, vamos supor que você tenha um código assim:
+
+
+def exemplo
+  return 10
+end
+Neste caso, o Ruby espera que depois da palavra-chave return haja uma expressão válida, como uma variável, uma chamada de método, ou uma expressão aritmética. Se você tentar retornar apenas o número 10, você receberá o erro "syntax error, unexpected integer literal", pois o interpretador do Ruby não esperava encontrar um número inteiro nesse contexto.
+
+Para corrigir esse erro, você precisa garantir que o número inteiro seja usado de acordo com a sintaxe correta da linguagem. Se você deseja retornar o número 10, pode fazer isso da seguinte forma:
+
+
+def exemplo
+  return 10
+end
+
+puts exemplo  # Isso irá imprimir "10" no console
+Agora, o número 10 está sendo retornado como parte de uma expressão válida dentro da função exemplo, e não haverá mais erros de sintaxe.
