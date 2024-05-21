@@ -1,0 +1,100 @@
+Escreva um programa que exiba "Olá, mundo!" na tela.
+Faça um programa que solicite o nome do usuário e o cumprimente.
+Crie um programa que calcule a soma de dois números.
+Faça um programa que leia um número e exiba o seu quadrado.
+Escreva um programa que verifique se um número é par ou ímpar.
+Crie um programa que calcule a média de três notas.
+Faça um programa que converta graus Celsius para Fahrenheit.
+Escreva um programa que verifique se um número é positivo, negativo ou zero.
+Crie um programa que leia dois números e exiba o maior deles.
+Faça um programa que leia o raio de um círculo e calcule sua área.
+Escreva um programa que conte de 1 a 10.
+Crie um programa que exiba a tabuada de multiplicação de um número.
+Faça um programa que calcule o fatorial de um número.
+Escreva um programa que verifique se um número é primo.
+Crie um programa que leia uma palavra e a exiba ao contrário.
+Faça um programa que verifique se uma palavra é um palíndromo.
+Escreva um programa que conte quantas vogais uma palavra possui.
+Crie um programa que exiba os números pares de 1 a 100.
+Faça um programa que calcule a soma dos números ímpares de 1 a 100.
+Escreva um programa que leia uma lista de números e exiba o maior e o menor deles.
+Faça um programa que ordene uma lista de números em ordem crescente.
+Crie um programa que calcule o máximo divisor comum (MDC) de dois números.
+Escreva um programa que converta um número decimal para binário.
+Faça um programa que calcule a média de uma lista de números.
+Crie um programa que verifique se uma lista de números está ordenada.
+Escreva um programa que conte quantas vezes uma determinada letra aparece em uma frase.
+Faça um programa que verifique se uma frase é um pangrama.
+Crie um programa que verifique se uma lista de números contém duplicatas.
+Escreva um programa que leia uma lista de números e exiba apenas os números únicos.
+Faça um programa que calcule a soma dos dígitos de um número.
+Crie um programa que verifique se um ano é bissexto.
+Escreva um programa que leia uma lista de números e exiba apenas os números pares.
+Faça um programa que calcule a média ponderada de três notas.
+Crie um programa que exiba todos os números primos de 1 a 100.
+Escreva um programa que leia uma lista de palavras e exiba a maior e a menor palavra.
+Faça um programa que calcule a média móvel de uma lista de números.
+Crie um programa que converta um número binário para decimal.
+Escreva um programa que verifique se uma frase é um palíndromo, desconsiderando espaços e pontuação.
+Faça um programa que verifique se uma palavra é um anagrama de outra.
+Crie um programa que leia uma lista de números e exiba apenas os números ímpares.
+Escreva um programa que conte quantos números primos existem em uma lista de números.
+Faça um programa que calcule o valor de Pi utilizando a fórmula de Leibniz.
+Crie um programa que verifique se uma lista de números forma uma progressão aritmética.
+Escreva um programa que converta um número decimal para hexadecimal.
+Faça um programa que calcule a média geométrica de uma lista de números.
+Crie um programa que verifique se uma lista de números forma uma progressão geométrica.
+Escreva um programa que verifique se uma palavra é um isograma.
+Faça um programa que calcule o fatorial de um número utilizando recursão.
+Crie um programa que verifique se uma lista de números forma uma sequência Fibonacci.
+Escreva um programa que exiba todos os divisores de um número.
+Faça um programa que calcule a mediana de uma lista de números.
+Crie um programa que verifique se uma lista de palavras forma uma frase pangramática.
+Escreva um programa que calcule o resto da divisão de um número por outro.
+Faça um programa que verifique se uma frase é um lipograma.
+Crie um programa que exiba todos os números perfeitos de 1 a 1000.
+Escreva um programa que verifique se uma lista de palavras forma um acróstico.
+Faça um programa que calcule o produto escalar de dois vetores.
+Crie um programa que leia uma lista de números e exiba apenas os números positivos.
+Escreva um programa que calcule o número de combinações de n elementos tomados k a k.
+Faça um programa que verifique se uma lista de palavras forma um anagrama perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números negativos.
+Escreva um programa que calcule o MMC de dois números.
+Faça um programa que verifique se uma lista de palavras forma um tautograma.
+Crie um programa que leia uma lista de números e exiba apenas os números primos.
+Escreva um programa que calcule a média harmônica de uma lista de números.
+Faça um programa que verifique se uma lista de palavras forma um palíndromo perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números pares e positivos.
+Escreva um programa que calcule o valor de Euler utilizando a fórmula de Euler.
+Faça um programa que verifique se uma lista de palavras forma um emagrama.
+Crie um programa que leia uma lista de números e exiba apenas os números ímpares e negativos.
+Escreva um programa que calcule o número de Euler utilizando a série de Taylor.
+Faça um programa que verifique se uma lista de palavras forma um autograma.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 3.
+Escreva um programa que calcule a média quadrática de uma lista de números.
+Faça um programa que verifique se uma lista de palavras forma um lipograma perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 5.
+Escreva um programa que calcule o coeficiente binomial de dois números.
+Faça um programa que verifique se uma lista de palavras forma um pangrama perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 7.
+Escreva um programa que calcule a soma dos termos de uma progressão aritmética.
+Faça um programa que verifique se uma lista de palavras forma um tautograma perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 11.
+Escreva um programa que calcule a soma dos termos de uma progressão geométrica.
+Faça um programa que verifique se uma lista de palavras forma um emagrama perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 13.
+Escreva um programa que calcule o valor de Pi utilizando a série de Gregory-Leibniz.
+Faça um programa que verifique se uma lista de palavras forma um autograma perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 17.
+Escreva um programa que calcule o valor de Euler utilizando a série de Nilakantha.
+Faça um programa que verifique se uma lista de palavras forma um lipograma perfeito.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 19.
+Escreva um programa que calcule o valor de Pi utilizando o método de Monte Carlo.
+Faça um programa que verifique se uma lista de palavras forma um pangrama pangramático.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 23.
+Escreva um programa que calcule o valor de Euler utilizando a série de Ramanujan.
+Faça um programa que verifique se uma lista de palavras forma um tautograma tautogramático.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 29.
+Escreva um programa que calcule o valor de Pi utilizando o método de Arquimedes.
+Faça um programa que verifique se uma lista de palavras forma um autograma autogramático.
+Crie um programa que leia uma lista de números e exiba apenas os números que são múltiplos de 31.
