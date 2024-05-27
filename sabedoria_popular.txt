@@ -51,3 +51,5 @@ def tail_length=(value)
 end
 
 -----------------------------------------------------------------------------------------------------
+
+Blocos Ruby que cabem em uma única linha devem ser colocados entre chaves. Blocos que abrangem várias linhas devem ser cercados por do...end. Esta não é a única convenção para formatação de bloco, mas é comum
