@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Completo de CSS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos globais */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #007BFF;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navegação */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Seções */
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+    }
+
+    section p {
+      margin-bottom: 15px;
+    }
+
+    section code {
+      display: block;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Projeto Prático */
+    .project {
+      background-color: #e9f5ff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .project .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .project .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="#pseudo">Pseudo-elementos e Pseudo-classes</a></li>
+      <li><a href="#animacoes">Transições e Animações</a></li>
+      <li><a href="#boas-praticas">Boas Práticas</a></li>
+      <li><a href="#projetos">Projetos Práticos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Curso Completo de CSS</h1>
+    <p>Aprenda CSS do básico ao avançado com exemplos práticos.</p>
+  </header>
+
+  <!-- Seção 1: Pseudo-elementos e Pseudo-classes -->
+  <section id="pseudo">
+    <h2>Pseudo-elementos e Pseudo-classes</h2>
+    <p>Pseudo-elementos e pseudo-classes permitem estilizar partes específicas de elementos.</p>
+    <h3>Pseudo-classes</h3>
+    <code>
+      a:hover { color: red; } /* Altera a cor ao passar o mouse */
+      input:focus { border-color: blue; } /* Altera a borda ao focar */
+    </code>
+    <h3>Pseudo-elementos</h3>
+    <code>
+      p::first-line { font-weight: bold; } /* Estiliza a primeira linha */
+      p::before { content: "→ "; } /* Adiciona conteúdo antes */
+    </code>
+    <p><strong>Referência:</strong> <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes" target="_blank">MDN Web Docs</a></p>
+  </section>
+
+  <!-- Seção 2: Transições e Animações -->
+  <section id="animacoes">
+    <h2>Transições e Animações</h2>
+    <p>Adicione interatividade e movimento aos elementos.</p>
+    <h3>Transições</h3>
+    <code>
+      .btn {
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </code>
+    <h3>Animações</h3>
+    <code>
+      @keyframes slide {
+        from { transform: translateX(0); }
+        to { transform: translateX(100px); }
+      }
+      .box {
+        animation: slide 2s infinite;
+      }
+    </code>
+    <p><strong>Referência:</strong> <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Animations" target="_blank">MDN Web Docs</a></p>
+  </section>
+
+  <!-- Seção 3: Boas Práticas e Convenções -->
+  <section id="boas-praticas">
+    <h2>Boas Práticas e Convenções no CSS</h2>
+    <p>Organize seu código para facilitar a manutenção.</p>
+    <h3>BEM (Block Element Modifier)</h3>
+    <code>
+      .block { } /* Bloco */
+      .block__element { } /* Elemento */
+      .block--modifier { } /* Modificador */
+    </code>
+    <h3>Evite !important</h3>
+    <p>Use especificidade ao invés de `!important`.</p>
+    <p><strong>Referência:</strong> <a href="https://css-tricks.com/bem-101/" target="_blank">CSS-Tricks</a></p>
+  </section>
+
+  <!-- Seção 4: Projetos Práticos -->
+  <!-- <section id="projetos">
+    <h2>Projetos Práticos</h2>
+    <div class="project">
+      <h3>1. Iniciando com Bootstrap</h3>
+      <p>Crie um layout responsivo usando o framework Bootstrap.</p>
+      <a href="bootstrap.html" class="btn">Ver Projeto</a>
+    </div>
+    <div class="project">
+      <h3>2. Clonando o Site da HBO Max</h3>
+      <p>Recrie a interface da HBO Max com animações CSS.</p>
+      <a href="hbo-max.html" class="btn">Ver Projeto</a>
+    </div>
+    <div class="project">
+      <h3>3. Layout Responsivo do Discord</h3>
+      <p>Construa um layout responsivo inspirado no Discord.</p>
+      <a href="discord.html" class="btn">Ver Projeto</a>
+    </div>
+  </section> -->
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2023 Curso Completo de CSS. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

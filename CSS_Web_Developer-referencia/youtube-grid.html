@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listagem do YouTube com Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .video {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .video img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="video">
+      <img src="thumb1.jpg" alt="Thumbnail">
+      <p>Título do Vídeo 1</p>
+    </div>
+    <div class="video">
+      <img src="thumb2.jpg" alt="Thumbnail">
+      <p>Título do Vídeo 2</p>
+    </div>
+    <!-- Adicione mais vídeos aqui -->
+  </div>
+</body>
+</html>

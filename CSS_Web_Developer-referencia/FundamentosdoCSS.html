@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Completo de CSS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos globais */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #007BFF;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navegação */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Seções */
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+    }
+
+    section p {
+      margin-bottom: 15px;
+    }
+
+    section code {
+      display: block;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Projeto Prático */
+    .project {
+      background-color: #e9f5ff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .project .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .project .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="#fundamentos">Fundamentos CSS</a></li>
+      <li><a href="#estilizacao">Estilização com CSS</a></li>
+      <li><a href="#unidades">Unidades de Medida</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Curso Completo de CSS</h1>
+    <p>Aprenda CSS do básico ao avançado com exemplos práticos.</p>
+  </header>
+
+  <!-- Seção 1: Fundamentos CSS -->
+  <section id="fundamentos">
+    <h2>Fundamentos CSS</h2>
+    <p>CSS (Cascading Style Sheets) é uma linguagem usada para estilizar elementos HTML.</p>
+    <h3>Sintaxe Básica</h3>
+    <code>
+      h1 {
+        color: blue; /* Propriedade: valor */
+        font-size: 24px; /* Tamanho da fonte */
+      }
+    </code>
+    <h3>Formas de Adicionar CSS</h3>
+    <p>1. <strong>Inline</strong>: Direto no elemento HTML.</p>
+    <code>&lt;h1 style="color: blue;"&gt;Título&lt;/h1&gt;</code>
+    <p>2. <strong>Interno</strong>: Dentro da tag &lt;style&gt; no HTML.</p>
+    <code>
+      &lt;style&gt;
+        h1 { color: blue; }
+      &lt;/style&gt;
+    </code>
+    <p>3. <strong>Externo</strong>: Em um arquivo `.css` separado.</p>
+    <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+  </section>
+
+  <!-- Seção 2: Estilização com CSS -->
+  <section id="estilizacao">
+    <h2>Estilização com CSS</h2>
+    <h3>Cores e Fundos</h3>
+    <code>
+      h1 {
+        color: #ff5733; /* Hexadecimal */
+        background-color: rgba(255, 87, 51, 0.5); /* RGBA com transparência */
+      }
+    </code>
+    <h3>Fontes e Textos</h3>
+    <code>
+      p {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </code>
+    <h3>Box Model</h3>
+    <code>
+      .box {
+        width: 200px;
+        padding: 20px; /* Espaço interno */
+        border: 2px solid black; /* Borda */
+        margin: 10px; /* Espaço externo */
+      }
+    </code>
+  </section>
+
+  <!-- Seção 3: Unidades de Medida -->
+  <section id="unidades">
+    <h2>Unidades de Medida em CSS</h2>
+    <h3>Unidades Absolutas</h3>
+    <code>h1 { font-size: 24px; }</code>
+    <h3>Unidades Relativas</h3>
+    <code>
+      .container { width: 80%; } /* Relativo ao elemento pai */
+      p { font-size: 1.5em; } /* Relativo ao tamanho da fonte do pai */
+      h2 { font-size: 2rem; } /* Relativo ao tamanho da fonte do &lt;html&gt; */
+      .hero { height: 100vh; } /* Relativo à altura da viewport */
+    </code>
+  </section>
+
+  <!-- Seção 4: Projeto Prático -->
+  <!-- <section id="projeto" class="project">
+    <h2>Projeto Prático: Landing Page</h2>
+    <p>Crie uma landing page simples e responsiva.</p>
+    <h3>Estrutura HTML</h3>
+    <code>
+      &lt;header&gt;
+        &lt;h1&gt;Bem-vindo à Nossa Landing Page&lt;/h1&gt;
+        &lt;p&gt;Uma página simples e elegante.&lt;/p&gt;
+      &lt;/header&gt;
+      &lt;section class="hero"&gt;
+        &lt;h2&gt;Conheça Nossos Serviços&lt;/h2&gt;
+        &lt;a href="#" class="btn"&gt;Saiba Mais&lt;/a&gt;
+      &lt;/section&gt;
+      &lt;footer&gt;
+        &lt;p&gt;&copy; 2023 Minha Empresa&lt;/p&gt;
+      &lt;/footer&gt;
+    </code>
+    <h3>Estilos CSS</h3>
+    <code>
+      .hero {
+        height: 50vh;
+        background: url('hero.jpg') no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+      .btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </code>
+    <a href="#" class="btn">Ver Projeto</a>
+  </section> -->
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2023 Curso Completo de CSS. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

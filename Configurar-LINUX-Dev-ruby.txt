@@ -1,0 +1,156 @@
+Ambiente dev ruby
+gistfile1.txt
+Ubuntu 22.04
+
+
+RVM(ruby version manager) - https://rvm.io
+
+
+Adicionar chaves gpg(se necessário):
+
+gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+
+
+https://github.com/rvm/ubuntu_rvm
+
+
+
+Instalar software-properties-common:
+sudo apt-get install software-properties-common
+
+Instalar rvm em si:
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt update
+sudo apt install rvm -y
+
+Adicionar seu usuario ao grupo rvm(bash reconhecer comando rvm)
+sudo usermod -a -G rvm $USER
+
+Definir que o rvm suba junto ao login
+echo 'source "/etc/profile.d/rvm.sh"' >> ~/.bashrc
+
+* obs: Rvm apenas subirá junto ao terminal no próximo login, ou seja, necessita que deslogue ou reinicie a máquina
+
+
+Ruby
+
+Instalar ruby(na versão 3.2.1 por ex):
+rvm install 3.2.1
+rvm list
+rvm use 3.2.1 --default
+rvm docs generate all
+
+
+PG Gem(lib postgresql)
+
+Instalar gema pg:
+
+gem install pg
+* obs: pode ser necessário instalar libs extras, ex: sudo apt install libpq-dev
+
+
+
+
+Node.js(NVM)
+
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+
+Instale:
+nvm install 18.17.1 
+nvm ls 
+nvm ls-remote
+nvm use 18.17.1
+
+
+Yarn
+
+Execute no terminal:
+npm i yarn --global
+
+
+
+Rails Gem(lib rails)
+
+Instalar gema rails:
+gem install rails -v 6.1.4.1
+gem install rails
+
+
+
+Redis
+
+Adicionar repositorio
+sudo add-apt-repository ppa:redislabs/redis
+sudo apt update
+sudo apt install redis -y
+redis-server -v
+
+
+
+PostgreSQL
+
+Adicionar repositorio:
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+Importar chave do repositorio:
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+Instalar postgres
+sudo apt install postgresql-14
+
+Reiniciar
+
+sudo usermod -aG ubuntu postgres(usar com cuidado)
+sudo passwd postgres
+
+pg_lsclusters
+pg_ctlcluster 14 main start
+
+Criar usuário/role no postgresql
+sudo -u postgres createuser --interactive
+
+* obs: aconselhável ter mesmo nome que seu $USER, sem senha e super-user
+
+Desabilitar postgres junto com inicialização
+sudo systemctl disable postgresql
+
+
+
+
+Docker
+
+
+Instalar pacotes necessários:
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+Adiconar chave GPG:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+Adicionar repositório do Docker às fontes do apt:
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt update
+
+sudo apt update
+
+Instalar o docker em si:
+sudo apt install docker-ce
+
+Adicionar usuario ao grupo docker
+sudo usermod -aG docker ${USER}
+
+* obs: pode ser necessário reiniciar
+
+
+
+Docker-Compose
+
+
+Baixar docker-compose:
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+Definir permissões:
+sudo chmod +x /usr/local/bin/docker-compose
+
+* obs: pode ser necessário reiniciar

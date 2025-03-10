@@ -1,0 +1,96 @@
+a onde esta o erro neste codigo esta é a mensagem de erro "/mnt/c/To-Do-Rails-React-App/backend/config/routes.rb:12: syntax error, unexpected ':', expecting `end' or dummy end
+namespace: api do"
+
+
+
+Rails.application.routes.draw do
+  # resources :todos
+  # # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # # Can be used by load balancers and uptime monitors to verify that the app is live.
+  # get "up" => "rails/health#show", as: :rails_health_check
+
+  # # Defines the root path route ("/")
+  # # root "posts#index"
+
+  namespace: api do
+    resources: todos do
+      member do
+        patch 'update_completed'
+      end
+    end
+  end
+end
+
+
+
+
+O erro no seu código ocorre porque você está usando namespace: com dois pontos (:) em vez de um espaço ( ). Em Ruby, a sintaxe correta para definir um namespace é namespace api do, sem os dois pontos após namespace.
+
+Aqui está o código corrigido:
+
+
+
+
+Rails.application.routes.draw do
+  # resources :todos
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get "up" => "rails/health#show", as: :rails_health_check
+
+  # Defines the root path route ("/")
+  # root "posts#index"
+
+  namespace :api do
+    resources :todos do
+      member do
+        patch 'update_completed'
+      end
+    end
+  end
+end
+
+
+
+
+
+
+
+O que foi corrigido:
+namespace: api do → namespace :api do:
+
+O correto é usar um espaço após namespace e um símbolo (:api) para definir o nome do namespace.
+
+resources: todos do → resources :todos do:
+
+O mesmo problema ocorre com resources. A sintaxe correta é resources :todos.
+
+Explicação do Código:
+namespace :api:
+
+Cria rotas dentro do namespace /api. Por exemplo, /api/todos.
+
+resources :todos:
+
+Define rotas RESTful para o recurso todos (index, show, new, create, edit, update, destroy).
+
+member do:
+
+Adiciona uma rota personalizada para uma ação específica em um recurso. Neste caso, update_completed será acessível via PATCH /api/todos/:id/update_completed.
+
+Como testar:
+Execute rails routes no terminal para verificar se as rotas foram criadas corretamente.
+
+Você verá algo como:
+
+Copy
+PATCH  /api/todos/:id/update_completed(.:format)  api/todos#update_completed
+Agora você pode implementar a ação update_completed no controller Api::TodosController.
+
+Dica:
+Sempre que encontrar erros de sintaxe como syntax error, unexpected ':', expecting end, verifique se você está usando a sintaxe correta para métodos e blocos em Ruby. Neste caso, o problema foi o uso incorreto de : após namespace e resources.
+
+Se precisar de mais ajuda ou quiser explorar outros conceitos de rotas no Rails, é só perguntar! 😊

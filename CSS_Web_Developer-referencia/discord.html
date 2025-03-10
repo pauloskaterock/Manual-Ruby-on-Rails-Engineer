@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Responsivo do Discord</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #7289DA;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .sidebar {
+      background-color: #2C2F33;
+      color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .content {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    @media (min-width: 768px) {
+      .main {
+        flex-direction: row;
+      }
+      .sidebar {
+        width: 200px;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Discord</h1>
+  </header>
+  <main class="main">
+    <aside class="sidebar">
+      <p>Canais</p>
+    </aside>
+    <section class="content">
+      <p>Bem-vindo ao servidor!</p>
+    </section>
+  </main>
+</body>
+</html>

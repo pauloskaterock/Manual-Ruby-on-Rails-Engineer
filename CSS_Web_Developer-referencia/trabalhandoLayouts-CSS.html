@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Completo de CSS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos globais */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #007BFF;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navegação */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Seções */
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+    }
+
+    section p {
+      margin-bottom: 15px;
+    }
+
+    section code {
+      display: block;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Projeto Prático */
+    .project {
+      background-color: #e9f5ff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .project .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .project .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="#position-display">Position e Display</a></li>
+      <li><a href="#flexbox">Flexbox</a></li>
+      <li><a href="#grid">Grid Layout</a></li>
+      <li><a href="#responsivo">Responsividade</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Curso Completo de CSS</h1>
+    <p>Aprenda CSS do básico ao avançado com exemplos práticos.</p>
+  </header>
+
+  <!-- Seção 1: Position e Display -->
+  <section id="position-display">
+    <h2>Position e Display</h2>
+    <p>Controlam como os elementos são exibidos e posicionados na página.</p>
+    <h3>Position</h3>
+    <code>
+      .relative { position: relative; top: 10px; left: 20px; } /* Relativo à posição original */
+      .absolute { position: absolute; top: 0; left: 0; } /* Relativo ao elemento pai posicionado */
+      .fixed { position: fixed; top: 0; left: 0; } /* Fixo na tela */
+    </code>
+    <h3>Display</h3>
+    <code>
+      .block { display: block; } /* Ocupa toda a largura */
+      .inline { display: inline; } /* Ocupa apenas o espaço necessário */
+      .inline-block { display: inline-block; } /* Combina características de block e inline */
+    </code>
+  </section>
+
+  <!-- Seção 2: Flexbox -->
+  <section id="flexbox">
+    <h2>Flexbox</h2>
+    <p>Um modelo de layout para criar designs flexíveis e alinhados.</p>
+    <h3>Exemplo Básico</h3>
+    <code>
+      .container {
+        display: flex;
+        justify-content: center; /* Alinha horizontalmente */
+        align-items: center; /* Alinha verticalmente */
+      }
+    </code>
+    <h3>Flex Direction</h3>
+    <code>
+      .container {
+        flex-direction: row; /* Padrão: horizontal */
+        flex-direction: column; /* Vertical */
+      }
+    </code>
+  </section>
+
+  <!-- Seção 3: Grid Layout -->
+  <section id="grid">
+    <h2>Grid Layout</h2>
+    <p>Um sistema de layout bidimensional para criar designs complexos.</p>
+    <h3>Exemplo Básico</h3>
+    <code>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+        gap: 10px; /* Espaço entre os itens */
+      }
+    </code>
+  </section>
+
+  <!-- Seção 4: Responsividade -->
+  <section id="responsivo">
+    <h2>Responsividade</h2>
+    <p>Técnicas para adaptar o layout a diferentes dispositivos.</p>
+    <h3>Media Queries</h3>
+    <code>
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Altera o layout para mobile */
+        }
+      }
+    </code>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2023 Curso Completo de CSS. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

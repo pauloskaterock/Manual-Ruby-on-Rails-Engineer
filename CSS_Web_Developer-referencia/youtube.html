@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone do YouTube</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f1f1f1;
+    }
+    .header input {
+      padding: 5px;
+      width: 300px;
+    }
+    .main {
+      display: flex;
+      margin-top: 20px;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    .content {
+      flex: 1;
+      padding: 10px;
+    }
+    .video {
+      margin-bottom: 20px;
+    }
+    .video img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div>Logo</div>
+    <input type="text" placeholder="Pesquisar">
+    <div>Perfil</div>
+  </header>
+  <main class="main">
+    <aside class="sidebar">
+      <p>Menu</p>
+    </aside>
+    <section class="content">
+      <div class="video">
+        <img src="thumb.jpg" alt="Thumbnail">
+        <p>Título do Vídeo</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
