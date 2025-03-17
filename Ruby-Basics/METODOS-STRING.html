@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Ruby - Métodos de String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .code {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📌 Criação de Strings</h1>
+        <p>No Ruby, uma string pode ser criada de várias maneiras:</p>
+        <pre class="code">
+string1 = "Olá, mundo!"  # Aspas duplas
+string2 = 'Olá, Ruby!'   # Aspas simples
+string3 = %q(Olá, mundo!) # Alternativa com %q
+string4 = %Q(Olá, Ruby!)  # Similar a aspas duplas
+        </pre>
+        
+        <h2>📌 Principais Métodos de String em Ruby</h2>
+        <ul>
+            <li><a href="#manipulacao">1️⃣ Manipulação Básica</a></li>
+            <li><a href="#alteracao">2️⃣ Alteração de Texto</a></li>
+            <li><a href="#substituicao">3️⃣ Substituição e Remoção</a></li>
+            <li><a href="#divisao">4️⃣ Divisão e Junção</a></li>
+            <li><a href="#interpolacao">5️⃣ Interpolação e Concatenação</a></li>
+            <li><a href="#acesso">6️⃣ Acesso e Modificação</a></li>
+            <li><a href="#comparacao">7️⃣ Comparação de Strings</a></li>
+            <li><a href="#prefixo">8️⃣ Verificação de Prefixo e Sufixo</a></li>
+            <li><a href="#repeticao">9️⃣ Repetição e Multiplicação</a></li>
+        </ul>
+
+        <h2 id="manipulacao">1️⃣ Manipulação Básica</h2>
+        <pre class="code">
+"Ruby".length → 4
+"Hello".size → 5
+"".empty? → true
+"Hello".include?("ll") → true
+        </pre>
+
+        <h2 id="alteracao">2️⃣ Alteração de Texto</h2>
+        <pre class="code">
+"ruby".upcase → "RUBY"
+"RUBY".downcase → "ruby"
+"ruby".capitalize → "Ruby"
+"RuBy".swapcase → "rUbY"
+"Ruby".reverse → "ybuR"
+        </pre>
+
+        <h2 id="substituicao">3️⃣ Substituição e Remoção</h2>
+        <pre class="code">
+"banana".gsub("a", "@") → "b@n@n@"
+"banana".sub("a", "@") → "b@anana"
+" Ruby ".strip → "Ruby"
+"Hello!".chop → "Hello"
+"Hello\n".chomp → "Hello"
+        </pre>
+
+        <h2 id="divisao">4️⃣ Divisão e Junção</h2>
+        <pre class="code">
+"a,b,c".split(",") → ["a", "b", "c"]
+["a", "b", "c"].join("-") → "a-b-c"
+        </pre>
+
+        <h2 id="interpolacao">5️⃣ Interpolação e Concatenação</h2>
+        <pre class="code">
+"Hello " + "World" → "Hello World"
+"Hello" << " World" → "Hello World"
+"Hello".concat(" World") → "Hello World"
+name = "Paulo"; "Olá, #{name}!" → "Olá, Paulo!"
+        </pre>
+
+        <h2 id="acesso">6️⃣ Acesso e Modificação</h2>
+        <pre class="code">
+"Ruby"[1] → "u"
+"Ruby"[1,2] → "ub"
+s = "Hello"; s.replace("Oi") → "Oi"
+        </pre>
+
+        <h2 id="comparacao">7️⃣ Comparação de Strings</h2>
+        <pre class="code">
+"Ruby" == "Ruby" → true
+"ruby".eql?("Ruby") → false
+"ruby".casecmp("RUBY") → 0 (igual)
+        </pre>
+
+        <h2 id="prefixo">8️⃣ Verificação de Prefixo e Sufixo</h2>
+        <pre class="code">
+"rails".start_with?("ra") → true
+"rails".end_with?("s")
