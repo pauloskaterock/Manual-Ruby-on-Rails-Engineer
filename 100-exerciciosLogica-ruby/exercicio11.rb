@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Escreva um programa que conte de 1 a 10.
 # 
 
@@ -37,3 +38,10 @@ end
 # O loop continua até que i atinja o valor 10.
 
 # Após a última iteração, o programa termina.
+=======
+# Escreva um programa que conte de 1 a 10.
+# 
+(1..10).each do |i|
+  puts i
+end
+>>>>>>> fa892ce8ba4f02ea1f18f736814dddac2d37b582

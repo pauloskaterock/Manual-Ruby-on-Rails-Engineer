@@ -1,0 +1,112 @@
+Aqui estão os principais comandos da linguagem Markdown, que é amplamente usada para formatação de texto em diversos contextos, como GitHub, documentação, blogs, etc.
+
+1. Títulos (Headings)
+Use o símbolo # para definir títulos. O número de # define o nível do título (de 1 a 6).
+
+markdown
+Copiar código
+# Título Nível 1
+## Título Nível 2
+### Título Nível 3
+2. Negrito
+Para aplicar negrito ao texto, use dois asteriscos ou dois underscores ao redor do texto.
+
+markdown
+Copiar código
+**Texto em negrito** 
+__Texto em negrito__
+3. Itálico
+Para aplicar itálico, use um asterisco ou um underscore ao redor do texto.
+
+markdown
+Copiar código
+*Texto em itálico*
+_TEXTO em itálico_
+4. Negrito e Itálico
+Você pode combinar ambos:
+
+markdown
+Copiar código
+***Texto em negrito e itálico***
+___Texto em negrito e itálico___
+5. Listas
+Listas não ordenadas
+Use o símbolo -, +, ou * para criar uma lista.
+
+markdown
+Copiar código
+- Item 1
+- Item 2
+    - Subitem 2.1
+    - Subitem 2.2
+Listas ordenadas
+Use números seguidos de um ponto para criar listas ordenadas.
+
+markdown
+Copiar código
+1. Primeiro item
+2. Segundo item
+    1. Subitem
+    2. Subitem
+6. Links
+Crie links com o formato [texto](URL).
+
+markdown
+Copiar código
+[Google](https://www.google.com)
+7. Imagens
+Para adicionar imagens, use o ponto de exclamação ! seguido de [texto-alt](URL-da-imagem).
+
+markdown
+Copiar código
+![Logo](https://exemplo.com/logo.png)
+8. Código
+Código em linha
+Use crases (`) para inserir código em linha.
+
+markdown
+Copiar código
+`print("Olá, mundo!")`
+Blocos de código
+Use três crases para criar blocos de código.
+
+markdown
+Copiar código
+def funcao(): return "bloco de código"
+
+Copiar código
+9. Citações (Blockquotes)
+Use o símbolo > para criar citações.
+
+markdown
+Copiar código
+> Esta é uma citação
+10. Linhas Horizontais
+Use três ou mais ---, *** ou ___ para criar uma linha horizontal.
+
+markdown
+Copiar código
+---
+11. Tabelas
+Crie tabelas usando pipes (|) e hífens (-) para definir as colunas e linhas.
+
+markdown
+Copiar código
+| Coluna 1 | Coluna 2 | Coluna 3 |
+|----------|----------|----------|
+| Linha 1  | Valor 1  | Valor 2  |
+| Linha 2  | Valor 3  | Valor 4  |
+12. Tarefas (Checkboxes)
+Use - [ ] para caixas de seleção não marcadas e - [x] para marcadas.
+
+markdown
+Copiar código
+- [ ] Tarefa 1
+- [x] Tarefa 2 concluída
+Esses são os principais comandos do Markdown para formatação de textos e documentos!
+
+
+
+
+
+
