@@ -5,6 +5,8 @@
 a = 5
 b = 5
 # puts a == b  # true
+
+
 # Desigualdade: != verifica se dois objetos não são iguais.
 
 a = 5
