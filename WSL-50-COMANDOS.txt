@@ -1,0 +1,50 @@
+1. ls - Lista os arquivos e diretórios no diretório atual.
+2. cd - Muda para outro diretório.
+3. pwd - Mostra o caminho completo do diretório atual.
+4. mkdir - Cria um novo diretório.
+5. rmdir - Remove um diretório vazio.
+6. rm - Remove arquivos ou diretórios.
+7. touch - Cria um novo arquivo vazio.
+8. cp - Copia arquivos ou diretórios.
+9. mv - Move ou renomeia arquivos ou diretórios.
+10. cat - Exibe o conteúdo de um arquivo.
+11. nano - Abre um editor de texto no terminal.
+12. vim - Abre o editor de texto Vim.
+13. sudo - Executa comandos com privilégios de administrador.
+14. apt-get update - Atualiza a lista de pacotes disponíveis.
+15. apt-get upgrade - Atualiza os pacotes instalados.
+16. apt-get install - Instala pacotes de software.
+17. apt-get remove - Remove pacotes instalados.
+18. chmod - Altera permissões de arquivos ou diretórios.
+19. chown - Altera o proprietário de arquivos ou diretórios.
+20. df - Mostra o uso do espaço em disco.
+21. du - Mostra o uso de espaço por arquivos e diretórios.
+22. free - Exibe informações sobre memória disponível e usada.
+23. top - Mostra os processos em execução em tempo real.
+24. ps - Lista os processos em execução.
+25. kill - Encerra processos pelo ID.
+26. grep - Procura por padrões em arquivos.
+27. find - Localiza arquivos ou diretórios.
+28. locate - Encontra arquivos rapidamente.
+29. history - Mostra o histórico de comandos usados.
+30. clear - Limpa a tela do terminal.
+31. echo - Exibe texto no terminal.
+32. whoami - Mostra o nome do usuário atual.
+33. uname - Mostra informações sobre o sistema.
+34. hostname - Mostra ou define o nome do host.
+35. ping - Testa a conectividade com outro host.
+36. wget - Baixa arquivos da internet.
+37. curl - Faz requisições HTTP e exibe o resultado.
+38. tar - Compacta ou descompacta arquivos.
+39. zip - Compacta arquivos em formato ZIP.
+40. unzip - Descompacta arquivos ZIP.
+41. ssh - Conecta-se a outro computador via SSH.
+42. scp - Copia arquivos entre computadores via SSH.
+43. alias - Cria atalhos para comandos.
+44. unalias - Remove atalhos criados com alias.
+45. env - Mostra variáveis de ambiente.
+46. export - Define variáveis de ambiente.
+47. man - Mostra o manual de um comando.
+48. wc - Conta linhas, palavras e caracteres em arquivos.
+49. sort - Ordena linhas de um arquivo.
+50. uniq - Remove linhas duplicadas de um arquivo.

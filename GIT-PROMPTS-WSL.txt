@@ -1,0 +1,93 @@
+# 30 Principais Comandos do Git e Suas Explicações
+
+1. **git init**  
+    Inicializa um novo repositório Git no diretório atual.
+
+2. **git clone <url>**  
+    Clona um repositório remoto para o diretório local.
+
+3. **git status**  
+    Mostra o status atual do repositório, incluindo arquivos modificados e não rastreados.
+
+4. **git add <arquivo>**  
+    Adiciona um arquivo específico à área de staging.
+
+5. **git add .**  
+    Adiciona todos os arquivos modificados à área de staging.
+
+6. **git commit -m "mensagem"**  
+    Salva as alterações na história do repositório com uma mensagem descritiva.
+
+7. **git push**  
+    Envia os commits locais para o repositório remoto.
+
+8. **git pull**  
+    Atualiza o repositório local com as alterações do repositório remoto.
+
+9. **git fetch**  
+    Baixa as alterações do repositório remoto sem mesclá-las automaticamente.
+
+10. **git merge <branch>**  
+     Mescla uma branch específica na branch atual.
+
+11. **git branch**  
+     Lista todas as branches no repositório.
+
+12. **git branch <nome>**  
+     Cria uma nova branch com o nome especificado.
+
+13. **git checkout <branch>**  
+     Troca para uma branch específica.
+
+14. **git checkout -b <branch>**  
+     Cria e troca para uma nova branch.
+
+15. **git log**  
+     Exibe o histórico de commits do repositório.
+
+16. **git diff**  
+     Mostra as diferenças entre os arquivos modificados e a última versão commitada.
+
+17. **git reset <arquivo>**  
+     Remove um arquivo da área de staging.
+
+18. **git reset --hard**  
+     Restaura o repositório para o último commit, descartando alterações locais.
+
+19. **git rm <arquivo>**  
+     Remove um arquivo do repositório e da área de staging.
+
+20. **git stash**  
+     Salva temporariamente as alterações não commitadas para limpar o diretório de trabalho.
+
+21. **git stash apply**  
+     Restaura as alterações salvas com `git stash`.
+
+22. **git remote -v**  
+     Lista os repositórios remotos configurados.
+
+23. **git remote add <nome> <url>**  
+     Adiciona um novo repositório remoto.
+
+24. **git tag <nome>**  
+     Cria uma tag para marcar um ponto específico na história do repositório.
+
+25. **git show <tag>**  
+     Exibe informações sobre uma tag específica.
+
+26. **git rebase <branch>**  
+     Reaplica commits da branch atual sobre outra branch.
+
+27. **git cherry-pick <commit>**  
+     Aplica um commit específico em outra branch.
+
+28. **git blame <arquivo>**  
+     Mostra quem fez cada alteração em um arquivo linha por linha.
+
+29. **git revert <commit>**  
+     Reverte um commit específico, criando um novo commit.
+
+30. **git log --oneline**  
+     Exibe o histórico de commits em uma única linha por commit.
+
+# Fim da Lista
