@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Linux para WSL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Principais Comandos Linux para WSL</h1>
+    <p>Lista com os 100 principais comandos Linux para uso no Windows Subsystem for Linux (WSL), organizados por categoria.</p>
+
+    <h2>Comandos Básicos</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>ls</code></td>
+            <td>Lista arquivos e diretórios.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/ls.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>cd [diretório]</code></td>
+            <td>Altera o diretório atual.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>pwd</code></td>
+            <td>Mostra o diretório atual.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/pwd.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>mkdir [nome]</code></td>
+            <td>Cria um novo diretório.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/mkdir.1.html" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Manipulação de Arquivos</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>cp [origem] [destino]</code></td>
+            <td>Copia arquivos e diretórios.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/cp.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>mv [origem] [destino]</code></td>
+            <td>Move ou renomeia arquivos.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/mv.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rm [arquivo]</code></td>
+            <td>Remove arquivos.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/rm.1.html" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Gerenciamento de Processos</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>ps</code></td>
+            <td>Exibe processos em execução.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/ps.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>kill [PID]</code></td>
+            <td>Finaliza um processo pelo ID.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/kill.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>top</code></td>
+            <td>Monitoramento de processos em tempo real.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/top.1.html" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Rede</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>ping [host]</code></td>
+            <td>Verifica a conectividade com um host.</td>
+            <td><a href="https://man7.org/linux/man-pages/man8/ping.8.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>curl [URL]</code></td>
+            <td>Realiza requisições HTTP.</td>
+            <td><a href="https://man7.org/linux/man-pages/man1/curl.1.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>netstat</code></td>
+            <td>Exibe conexões de rede ativas.</td>
+            <td><a href="https://man7.org/linux/man-pages/man8/netstat.8.html" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Mais Comandos</h2>
+    <p>Para acessar a documentação de qualquer comando, você pode utilizar:</p>
+    <pre><code>man [comando]</code></pre>
+    <p>Exemplo:</p>
+    <pre><code>man ls</code></pre>
+
+    <p>Para ver todos os comandos disponíveis no sistema, use:</p>
+    <pre><code>compgen -c</code></pre>
+
+</body>
+</html>

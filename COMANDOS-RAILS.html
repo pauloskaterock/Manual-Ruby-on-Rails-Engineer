@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Rails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Comandos Rails</h1>
+    <p>O Rails possui uma ampla gama de comandos que facilitam o desenvolvimento de aplicações web. Aqui está uma lista com os principais comandos e suas funções:</p>
+
+    <h2>Comandos Básicos</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>rails new [nome_app]</code></td>
+            <td>Cria uma nova aplicação Rails.</td>
+            <td><a href="https://guides.rubyonrails.org/getting_started.html" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails server</code></td>
+            <td>Inicia o servidor de desenvolvimento.</td>
+            <td><a href="https://guides.rubyonrails.org/command_line.html#rails-server" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails console</code></td>
+            <td>Abre um console interativo para testar objetos e métodos.</td>
+            <td><a href="https://guides.rubyonrails.org/command_line.html#rails-console" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails generate [tipo] [nome]</code></td>
+            <td>Gera arquivos como modelos, controladores, migrações, etc.</td>
+            <td><a href="https://guides.rubyonrails.org/command_line.html#rails-generate" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Comandos de Banco de Dados</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>rails db:migrate</code></td>
+            <td>Aplica migrações de banco de dados.</td>
+            <td><a href="https://guides.rubyonrails.org/active_record_migrations.html#migrations" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails db:create</code></td>
+            <td>Cria o banco de dados especificado na configuração.</td>
+            <td><a href="https://guides.rubyonrails.org/active_record_migrations.html#creating-the-database" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails db:drop</code></td>
+            <td>Remove o banco de dados.</td>
+            <td><a href="https://guides.rubyonrails.org/active_record_migrations.html#dropping-the-database" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails db:seed</code></td>
+            <td>Popula o banco de dados com dados iniciais.</td>
+            <td><a href="https://guides.rubyonrails.org/active_record_migrations.html#seeds" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Comandos Avançados</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>rails dbconsole</code></td>
+            <td>Abre o console do banco de dados.</td>
+            <td><a href="https://guides.rubyonrails.org/command_line.html#rails-dbconsole" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails destroy [tipo] [nome]</code></td>
+            <td>Remove arquivos gerados anteriormente.</td>
+            <td><a href="https://guides.rubyonrails.org/command_line.html#rails-destroy" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Comandos de Configuração</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>rails credentials:edit</code></td>
+            <td>Edita as credenciais criptografadas da aplicação.</td>
+            <td><a href="https://guides.rubyonrails.org/security.html#custom-credentials" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails secret</code></td>
+            <td>Gera uma chave secreta para uso na aplicação.</td>
+            <td><a href="https://guides.rubyonrails.org/security.html#custom-credentials" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Comandos de Migração</h2>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+            <th>Documentação</th>
+        </tr>
+        <tr>
+            <td><code>rails db:migrate:status</code></td>
+            <td>Mostra o status das migrações.</td>
+            <td><a href="https://guides.rubyonrails.org/active_record_migrations.html#checking-the-status-of-migrations" target="_blank">Documentação</a></td>
+        </tr>
+        <tr>
+            <td><code>rails db:rollback</code></td>
+            <td>Reverte a última migração aplicada.</td>
+            <td><a href="https://guides.rubyonrails.org/active_record_migrations.html#rolling-back-migrations" target="_blank">Documentação</a></td>
+        </tr>
+    </table>
+
+    <h2>Como Saber Quais Migrações Foram Aplicadas</h2>
+    <p>Para listar o status das migrações, use:</p>
+    <pre><code>rails db:migrate:status</code></pre>
+    <p>Para listar os arquivos de migração:</p>
+    <pre><code>ls db/migrate/</code></pre>
+    <p>Para verificar migrações aplicadas no banco de dados:</p>
+    <pre><code>rails dbconsole</code></pre>
+    <p>Em seguida, no console SQL, execute:</p>
+    <pre><code>SELECT * FROM schema_migrations;</code></pre>
+
+    <h2>Mais Comandos</h2>
+    <p>Para ver todos os comandos disponíveis no Rails, utilize:</p>
+    <pre><code>rails --help</code></pre>
+
+</body>
+</html>
