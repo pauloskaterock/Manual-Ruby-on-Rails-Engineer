@@ -37,7 +37,7 @@ puts array.inspect
 # app/models/user.rb
 class User < ApplicationRecord
     has_many :posts
-  end
+end
   
   # app/models/post.rb
   class Post < ApplicationRecord
