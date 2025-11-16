@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo WSL para Ruby on Rails</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #2980b9;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary);
+        }
+        
+        h1 {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            border-left: 3px solid var(--info);
+            padding-left: 10px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .warning {
+            border-left-color: var(--warning);
+            background-color: #fff3cd;
+        }
+        
+        .success {
+            border-left-color: var(--success);
+            background-color: #d4edda;
+        }
+        
+        .info {
+            border-left-color: var(--info);
+            background-color: #d1ecf1;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .command {
+            color: #50fa7b;
+        }
+        
+        .comment {
+            color: #6272a4;
+        }
+        
+        .step {
+            margin-bottom: 2rem;
+        }
+        
+        .toggle {
+            background-color: var(--primary);
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .toggle:hover {
+            background-color: var(--dark);
+        }
+        
+        .content {
+            padding: 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 0 0 5px 5px;
+            margin-bottom: 15px;
+        }
+        
+        .terminal {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .path-correct {
+            color: #50fa7b;
+        }
+        
+        .path-wrong {
+            color: #ff5555;
+        }
+        
+        .checklist {
+            margin: 15px 0;
+        }
+        
+        .checklist li {
+            margin: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+        }
+        
+        .checklist li.completed:before {
+            content: "✅";
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .command-list {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .command-item {
+            margin: 8px 0;
+            padding: 5px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .extension-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--info);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin: 0 5px;
+            color: white;
+        }
+        
+        .badge-primary {
+            background-color: var(--primary);
+        }
+        
+        .badge-success {
+            background-color: var(--success);
+        }
+        
+        .badge-warning {
+            background-color: var(--warning);
+        }
+        
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 16px;
+            transition: 0.3s;
+            flex-grow: 1;
+        }
+        
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        
+        .tab button.active {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .tabcontent {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            animation: fadeEffect 0.5s;
+        }
+        
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        .copy-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .copy-btn:hover {
+            background: var(--dark);
+        }
+        
+        .visible {
+            display: block;
+        }
+        
+        .tab-content-container {
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab button {
+                flex-basis: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guia Completo: Configuração do WSL para Ruby on Rails</h1>
+        <p>Aprenda a configurar corretamente seu ambiente de desenvolvimento no WSL para máxima performance</p>
+    </header>
+
+    <div class="card warning">
+        <h2>⚠️ Problema Identificado</h2>
+        <p>Seu ambiente atual está configurado para trabalhar no sistema de arquivos do Windows (<code>/mnt/c/</code>), o que causa:</p>
+        <ul>
+            <li>Performance lentíssima</li>
+            <li>Erros com o Solargraph</li>
+            <li>Problemas com gems nativas</li>
+            <li>Incompatibilidade com ferramentas de desenvolvimento</li>
+        </ul>
+    </div>
+
+    <h2>Pré-requisitos</h2>
+    <div class="card">
+        <ul class="checklist">
+            <li class="completed">✅ WSL instalado (Ubuntu preferencialmente)</li>
+            <li class="completed">✅ VS Code instalado no Windows</li>
+            <li class="completed">✅ Extensão "Remote - WSL" do VS Code</li>
+            <li class="completed">✅ Acesso administrativo</li>
+        </ul>
+    </div>
+
+    <div class="tab-content-container">
+        <div class="tab">
+            <button class="tablinks active" data-tab="Setup">Configuração</button>
+            <button class="tablinks" data-tab="Commands">Comandos WSL</button>
+            <button class="tablinks" data-tab="Shortcuts">Atalhos VS Code</button>
+            <button class="tablinks" data-tab="Extensions">Extensões</button>
+            <button class="tablinks" data-tab="RubyConfig">Configuração Ruby</button>
+        </div>
+
+        <div id="Setup" class="tabcontent visible">
+            <h2>Configuração Passo a Passo</h2>
+
+            <div class="step">
+                <button class="toggle">Preparação do Ambiente WSL <span>►</span></button>
+                <div class="content">
+                    <h3>Verifique sua instalação do WSL</h3>
+                    <p>Abra o terminal do WSL (Ubuntu) e execute:</p>
+                    
+                    <div class="terminal">
+                        <span class="command">wsl --list --verbose</span>
+                        <button class="copy-btn" onclick="copyToClipboard('wsl --list --verbose')">Copiar</button>
+                    </div>
+                    
+                    <p>Você deve ver algo como:</p>
+                    <pre>  NAME      STATE           VERSION
+* Ubuntu    Running         2</pre>
+                    
+                    <p>Se não tiver o WSL instalado, execute no PowerShell (como administrador):</p>
+                    <div class="terminal">
+                        <span class="command">wsl --install</span>
+                        <button class="copy-btn" onclick="copyToClipboard('wsl --install')">Copiar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <button class="toggle">Configuração do Sistema de Arquivos <span>►</span></button>
+                <div class="content">
+                    <h3>Entendendo a Estrutura Correta</h3>
+                    <p>Seu ambiente atual:</p>
+                    <div class="terminal">
+                        <span class="path-wrong">/mnt/c/Users/paulo/meu_app</span> ❌ <strong>ERRADO</strong> (Sistema de arquivos Windows)
+                    </div>
+                    
+                    <p>Seu ambiente deve ser:</p>
+                    <div class="terminal">
+                        <span class="path-correct">/home/pauloskaterock/projects/meu_app</span> ✅ <strong>CORRETO</strong> (Sistema de arquivos Linux)
+                    </div>
+                    
+                    <h3>Criando a Estrutura de Pastas</h3>
+                    <p>Execute no terminal WSL:</p>
+                    <div class="terminal">
+                        <span class="command">cd ~</span><br>
+                        <span class="command">mkdir -p projects</span><br>
+                        <span class="command">ls -la</span> <span class="comment"># Deve mostrar a pasta 'projects'</span>
+                        <button class="copy-btn" onclick="copyToClipboard('cd ~ && mkdir -p projects && ls -la')">Copiar Tudo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <button class="toggle">Migrando seus Projetos <span>►</span></button>
+                <div class="content">
+                    <h3>Copiando Projetos para o WSL</h3>
+                    <p>Execute no terminal WSL:</p>
+                    <div class="terminal">
+                        <span class="command">cp -r /mnt/c/Users/paulo/meu_app ~/projects/</span><br>
+                        <span class="command">cd ~/projects/meu_app</span><br>
+                        <span class="command">pwd</span> <span class="comment"># Deve mostrar: /home/pauloskaterock/projects/meu_app</span>
+                        <button class="copy-btn" onclick="copyToClipboard('cp -r /mnt/c/Users/paulo/meu_app ~/projects/ && cd ~/projects/meu_app && pwd')">Copiar Tudo</button>
+                    </div>
+                    
+                    <div class="card warning">
+                        <h4>⚠️ Importante</h4>
+                        <p>Nunca mais trabalhe diretamente na pasta <code>/mnt/c/</code>. Sempre use o sistema de arquivos do WSL (<code>/home/seu_usuario/</code>).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <button class="toggle">Configuração do Terminal <span>►</span></button>
+                <div class="content">
+                    <h3>Configure seu terminal para sempre iniciar no diretório correto</h3>
+                    <p>Edite o arquivo de configuração do shell:</p>
+                    <div class="terminal">
+                        <span class="command">nano ~/.bashrc</span>
+                        <button class="copy-btn" onclick="copyToClipboard('nano ~/.bashrc')">Copiar</button>
+                    </div>
+                    
+                    <p>Adicione estas linhas no final do arquivo:</p>
+                    <pre># Configurações para WSL - Início
+cd ~  # Sempre inicia no diretório home
+
+# Aliases úteis
+alias win="cd /mnt/c/Users/paulo"
+alias projects="cd ~/projects"
+alias home="cd ~"
+
+# Corrige problema de tamanho de tela
+export TERM=xterm
+# Configurações para WSL - Fim</pre>
+                    
+                    <p>Salve o arquivo (Ctrl+X, depois Y, depois Enter) e recarregue:</p>
+                    <div class="terminal">
+                        <span class="command">source ~/.bashrc</span>
+                        <button class="copy-btn" onclick="copyToClipboard('source ~/.bashrc')">Copiar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <button class="toggle">Configuração do VS Code <span>►</span></button>
+                <div class="content">
+                    <h3>Instalando as Extensões Corretas</h3>
+                    <ol>
+                        <li>Abra o VS Code</li>
+                        <li>Instale a extensão <strong>"Remote - WSL"</strong></li>
+                        <li>Feche completamente o VS Code</li>
+                    </ol>
+                    
+                    <h3>Abrindo Projetos Corretamente</h3>
+                    <p>SEMPRE abra o VS Code a partir do terminal WSL:</p>
+                    <div class="terminal">
+                        <span class="command">cd ~/projects/meu_app</span><br>
+                        <span class="command">code .</span> <span class="comment"># Isso abre o VS Code no contexto WSL</span>
+                        <button class="copy-btn" onclick="copyToClipboard('cd ~/projects/meu_app && code .')">Copiar Tudo</button>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>✅ Verificação de Sucesso</h4>
+                        <p>No canto inferior esquerdo do VS Code, você deve ver:</p>
+                        <p><strong>WSL: Ubuntu</strong> - ✅ Significa que está no ambiente correto</p>
+                    </div>
+                    
+                    <h3>Instalando Extensões no Contexto WSL</h3>
+                    <p>Com o VS Code aberto no WSL, instale estas extensões:</p>
+                    <ul>
+                        <li>Ruby</li>
+                        <li>Ruby Solargraph</li>
+                        <li>Rails</li>
+                        <li>Error Lens</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <button class="toggle">Configuração do Ruby e Gems <span>►</span></button>
+                <div class="content">
+                    <h3>Reinstalando o Solargraph Corretamente</h3>
+                    <p>Execute no terminal do VS Code (que está no contexto WSL):</p>
+                    <div class="terminal">
+                        <span class="command">gem uninstall solargraph</span><br>
+                        <span class="command">gem install solargraph</span><br>
+                        <span class="command">which solargraph</span> <span class="comment"># Deve mostrar caminho no WSL</span>
+                        <button class="copy-btn" onclick="copyToClipboard('gem uninstall solargraph && gem install solargraph && which solargraph')">Copiar Tudo</button>
+                    </div>
+                    
+                    <h3>Configurando o Solargraph no VS Code</h3>
+                    <p>No VS Code, pressione Ctrl+Shift+P e digite "Preferences: Open Settings (JSON)"</p>
+                    <p>Adicione estas configurações:</p>
+                    <pre>{
+  "solargraph.useBundler": false,
+  "solargraph.commandPath": "/home/pauloskaterock/.rbenv/shims/solargraph",
+  "ruby.solargraph.path": "/home/pauloskaterock/.rbenv/shims/solargraph"
+}</pre>
+                </div>
+            </div>
+
+            <div class="step">
+                <button class="toggle">Verificação Final <span>►</span></button>
+                <div class="content">
+                    <h3>Teste de Configuração</h3>
+                    <p>Execute esta sequência de verificação:</p>
+                    <div class="terminal">
+                        <span class="command">cd ~/projects/meu_app</span><br>
+                        <span class="command">pwd</span> <span class="comment"># Deve ser: /home/pauloskaterock/projects/meu_app</span><br>
+                        <span class="command">df -h .</span> <span class="comment"># Deve mostrar "wslfs" ou "ext4"</span><br>
+                        <span class="command">solargraph --version</span> <span class="comment"># Deve mostrar a versão sem erros</span><br>
+                        <span class="command">time bundle install</span> <span class="comment"># Deve ser rápido (segundos, não minutos)</span>
+                        <button class="copy-btn" onclick="copyToClipboard('cd ~/projects/meu_app && pwd && df -h . && solargraph --version && time bundle install')">Copiar Tudo</button>
+                    </div>
+                    
+                    <div class="card success">
+                        <h4>🎉 Parabéns!</h4>
+                        <p>Se todos os testes passaram, seu ambiente está configurado corretamente!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Commands" class="tabcontent">
+            <h2>50 Comandos Essenciais do WSL</h2>
+            
+            <div class="grid">
+                <div class="command-list">
+                    <h3>📁 Comandos de Arquivos e Diretórios</h3>
+                    <div class="command-item"><code>ls -la</code> - Listar arquivos com detalhes</div>
+                    <div class="command-item"><code>pwd</code> - Mostrar diretório atual</div>
+                    <div class="command-item"><code>cd ~</code> - Ir para diretório home</div>
+                    <div class="command-item"><code>mkdir projeto</code> - Criar diretório</div>
+                    <div class="command-item"><code>rm -rf dir</code> - Remover diretório</div>
+                    <div class="command-item"><code>cp -r orig dest</code> - Copiar recursivamente</div>
+                    <div class="command-item"><code>mv orig dest</code> - Mover/renomear</div>
+                    <div class="command-item"><code>find . -name "*.rb"</code> - Encontrar arquivos</div>
+                    <div class="command-item"><code>grep -r "texto" .</code> - Buscar texto em arquivos</div>
+                    <div class="command-item"><code>chmod +x arquivo</code> - Tornar executável</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>⚙️ Comandos do Sistema</h3>
+                    <div class="command-item"><code>sudo apt update</code> - Atualizar lista de pacotes</div>
+                    <div class="command-item"><code>sudo apt upgrade</code> - Atualizar pacotes</div>
+                    <div class="command-item"><code>sudo apt install pacote</code> - Instalar pacote</div>
+                    <div class="command-item"><code>sudo apt remove pacote</code> - Remover pacote</div>
+                    <div class="command-item"><code>df -h</code> - Espaço em disco</div>
+                    <div class="command-item"><code>free -h</code> - Memória disponível</div>
+                    <div class="command-item"><code>top</code> - Gerenciador de tarefas</div>
+                    <div class="command-item"><code>ps aux</code> - Processos em execução</div>
+                    <div class="command-item"><code>kill -9 PID</code> - Finalizar processo</div>
+                    <div class="command-item"><code>history</code> - Histórico de comandos</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>🔧 Comandos de Rede</h3>
+                    <div class="command-item"><code>curl -I URL</code> - Verificar cabeçalhos HTTP</div>
+                    <div class="command-item"><code>wget URL</code> - Baixar arquivo</div>
+                    <div class="command-item"><code>ping dominio.com</code> - Testar conectividade</div>
+                    <div class="command-item"><code>ifconfig</code> - Configurações de rede</div>
+                    <div class="command-item"><code>ssh usuario@host</code> - Conexão SSH</div>
+                    <div class="command-item"><code>scp arquivo user@host:path</code> - Copiar via SSH</div>
+                    <div class="command-item"><code>netstat -tulpn</code> - Portas em uso</div>
+                    <div class="command-item"><code>dig dominio.com</code> - Consulta DNS</div>
+                    <div class="command-item"><code>traceroute dominio.com</code> - Rota de réseau</div>
+                    <div class="command-item"><code>telnet host porta</code> - Testar porta</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>🐙 Comandos Git</h3>
+                    <div class="command-item"><code>git status</code> - Status do repositório</div>
+                    <div class="command-item"><code>git add .</code> - Adicionar arquivos</div>
+                    <div class="command-item"><code>git commit -m "msg"</code> - Commitar mudanças</div>
+                    <div class="command-item"><code>git push origin main</code> - Enviar para remoto</div>
+                    <div class="command-item"><code>git pull</code> - Atualizar do remoto</div>
+                    <div class="command-item"><code>git branch</code> - Listar branches</div>
+                    <div class="command-item"><code>git checkout branch</code> - Mudar de branch</div>
+                    <div class="command-item"><code>git log --oneline</code> - Histórico compacto</div>
+                    <div class="command-item"><code>git diff</code> - Mostrar diferenças</div>
+                    <div class="command-item"><code>git stash</code> - Guardar mudanças temporárias</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>💎 Comandos Ruby/Rails</h3>
+                    <div class="command-item"><code>ruby -v</code> - Versão do Ruby</div>
+                    <div class="command-item"><code>rails -v</code> - Versão do Rails</div>
+                    <div class="command-item"><code>bundle install</code> - Instalar gems</div>
+                    <div class="command-item"><code>rails server</code> - Iniciar servidor</div>
+                    <div class="command-item"><code>rails console</code> - Console interativo</div>
+                    <div class="command-item"><code>rails db:migrate</code> - Executar migrações</div>
+                    <div class="command-item"><code>rake -T</code> - Listar tarefas Rake</div>
+                    <div class="command-item"><code>rspec</code> - Executar testes</div>
+                    <div class="command-item"><code>rubocop</code> - Análise de código</div>
+                    <div class="command-item"><code>gem list</code> - Listar gems instaladas</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Shortcuts" class="tabcontent">
+            <h2>50 Atalhos do VS Code para Produtividade</h2>
+            
+            <div class="grid">
+                <div class="command-list">
+                    <h3>📝 Edição Básica</h3>
+                    <div class="command-item"><code>Ctrl + X</code> - Recortar linha</div>
+                    <div class="command-item"><code>Ctrl + C</code> - Copiar linha</div>
+                    <div class="command-item"><code>Ctrl + V</code> - Colar</div>
+                    <div class="command-item"><code>Ctrl + Z</code> - Desfazer</div>
+                    <div class="command-item"><code>Ctrl + Y</code> - Refazer</div>
+                    <div class="command-item"><code>Ctrl + D</code> - Selecionar próxima ocorrência</div>
+                    <div class="command-item"><code>Alt + ↑/↓</code> - Mover linha</div>
+                    <div class="command-item"><code>Shift + Alt + ↑/↓</code> - Duplicar linha</div>
+                    <div class="command-item"><code>Ctrl + /</code> - Comentar/descomentar</div>
+                    <div class="command-item"><code>Ctrl + F</code> - Localizar</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>🚀 Navegação</h3>
+                    <div class="command-item"><code>Ctrl + P</code> - Procurar arquivo</div>
+                    <div class="command-item"><code>Ctrl + Shift + P</code> - Paleta de comandos</div>
+                    <div class="command-item"><code>Ctrl + G</code> - Ir para linha</div>
+                    <div class="command-item"><code>Ctrl + Shift + O</code> - Ir para símbolo</div>
+                    <div class="command-item"><code>F12</code> - Ir para definição</div>
+                    <div class="command-item"><code>Alt + ←/→</code> - Navegar histórico</div>
+                    <div class="command-item"><code>Ctrl + Tab</code> - Alternar abas</div>
+                    <div class="command-item"><code>Ctrl + B</code> - Mostrar/ocultar explorer</div>
+                    <div class="command-item"><code>Ctrl + `</code> - Mostrar/ocultar terminal</div>
+                    <div class="command-item"><code>F11</code> - Tela cheia</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>🔧 Controle do Editor</h3>
+                    <div class="command-item"><code>Ctrl + +/-</code> - Zoom in/out</div>
+                    <div class="command-item"><code>Ctrl + B</code> - Alternar barra lateral</div>
+                    <div class="command-item"><code>Ctrl + J</code> - Alternar painel inferior</div>
+                    <div class="command-item"><code>Ctrl + Shift + E</code> - Explorer</div>
+                    <div class="command-item"><code>Ctrl + Shift + F</code> - Pesquisar</div>
+                    <div class="command-item"><code>Ctrl + Shift + X</code> - Extensões</div>
+                    <div class="command-item"><code>Ctrl + Shift + D</code> - Debug</div>
+                    <div class="command-item"><code>Ctrl + K Z</code> - Modo Zen</div>
+                    <div class="command-item"><code>Ctrl + \</code> - Split editor</div>
+                    <div class="command-item"><code>F8</code> - Próximo erro/aviso</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>💎 Ruby/Rails Específicos</h3>
+                    <div class="command-item"><code>Ctrl + Shift + P > Ruby: Start Server</code> - Iniciar Solargraph</div>
+                    <div class="command-item"><code>Ctrl + .</code> - Sugestões de código</div>
+                    <div class="command-item"><code>F2</code> - Renomear símbolo</div>
+                    <div class="command-item"><code>Ctrl + K Ctrl + I</code> - Show hover</div>
+                    <div class="command-item"><code>Shift + F12</code> - Ver referências</div>
+                    <div class="command-item"><code>Ctrl + K Ctrl + C</code> - Add line comment</div>
+                    <div class="command-item"><code>Ctrl + K Ctrl + U</code> - Remove line comment</div>
+                    <div class="command-item"><code>Alt + F12</code> - Peek definition</div>
+                    <div class="command-item"><code>Ctrl + K Ctrl + X</code> - Trim trailing whitespace</div>
+                    <div class="command-item"><code>Ctrl + M</code> - Toggle tab moves focus</div>
+                </div>
+                
+                <div class="command-list">
+                    <h3>⚡ Atalhos Personalizáveis</h3>
+                    <div class="command-item"><code>Ctrl + Shift + R</code> - Executar tarefa</div>
+                    <div class="command-item"><code>Ctrl + Shift + `</code> - Novo terminal</div>
+                    <div class="command-item"><code>Ctrl + Shift + [</code> - Dobrar código</div>
+                    <div class="command-item"><code>Ctrl + Shift + ]</code> - Desdobrar código</div>
+                    <div class="command-item"><code>Alt + Click</code> - Múltiplos cursores</div>
+                    <div class="command-item"><code>Ctrl + Alt + ↑/↓</code> - Multi-cursor</div>
+                    <div class="command-item"><code>Ctrl + U</code> - Desfazer último cursor</div>
+                    <div class="command-item"><code>Shift + Alt + I</code> - Insert cursor at end</div>
+                    <div class="command-item"><code>Ctrl + F2</code> - Selecionar todas ocorrências</div>
+                    <div class="command-item"><code>Ctrl + Shift + L</code> - Selecionar todas ocorrências</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Extensions" class="tabcontent">
+            <h2>Extensões Essenciais para Ruby on Rails</h2>
+            
+            <div class="extension-card">
+                <h3>Ruby <span class="badge badge-primary">Essencial</span></h3>
+                <p><strong>Para que serve:</strong> Fornece suporte completo para linguagem Ruby, incluindo debugging, linting e formatação.</p>
+                <p><strong>Como usar:</strong> Instale e reinicie o VS Code. O suporte a Ruby será automático.</p>
+                <p><strong>Comando útil:</strong> <code>Ctrl+Shift+P > Ruby: Start Language Server</code></p>
+            </div>
+            
+            <div class="extension-card">
+                <h3>Ruby Solargraph <span class="badge badge-primary">Essencial</span></h3>
+                <p><strong>Para que serve:</strong> Fornece autocompletion, intelliSense e documentação em tempo real para Ruby.</p>
+                <p><strong>Como usar:</strong> Requer gem solargraph instalada. Use <code>gem install solargraph</code> no WSL.</p>
+                <p><strong>Comando útil:</strong> <code>Ctrl+Shift+P > Solargraph: Restart</code></p>
+            </div>
+            
+            <div class="extension-card">
+                <h3>Rails <span class="badge badge-primary">Essencial</span></h3>
+                <p><strong>Para que serve:</strong> Adiciona suporte específico para Ruby on Rails, com snippets e navegação.</p>
+                <p><strong>Como usar:</strong> Instale e tenha autocomplete para helpers, models, controllers do Rails.</p>
+                <p><strong>Comando útil:</strong> <code>Ctrl+Shift+P > Rails: Create Partial</code></p>
+            </div>
+            
+            <div class="extension-card">
+                <h3>Error Lens <span class="badge badge-success">Produtividade</span></h3>
+                <p><strong>Para que serve:</strong> Melhora a visibilidade de erros e avisos destacando-os inline.</p>
+                <p><strong>Como usar:</strong> Instale e os erros serão destacados diretamente no código.</p>
+            </div>
+            
+            <div class="extension-card">
+                <h3>GitLens <span class="badge badge-success">Produtividade</span></h3>
+                <p><strong>Para que serve:</strong> Supercharga o Git no VS Code, mostrando blame, histórico e muito mais.</p>
+                <p><strong>Como usar:</strong> Instale e veja informações do Git diretamente no editor.</p>
+                <p><strong>Comando útil:</strong> <code>Ctrl+Shift+P > GitLens: Enable</code></p>
+            </div>
+            
+            <div class="extension-card">
+                <h3>Remote - WSL <span class="badge badge-primary">Essencial</span></h3>
+                <p><strong>Para que serve:</strong> Permite usar o VS Code com o WSL como se estivesse no Linux nativo.</p>
+                <p><strong>Como usar:</strong> Instale e use <code>code .</code> no terminal WSL para abrir projetos.</p>
+            </div>
+            
+            <h3>Configuração Recomendada para Extensões (settings.json)</h3>
+            <pre>{
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.format": "rubocop",
+  "gitlens.currentLine.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.rubocop": true
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  }
+}</pre>
+        </div>
+
+        <div id="RubyConfig" class="tabcontent">
+            <h2>Configuração Avançada para Ruby on Rails</h2>
+            
+            <div class="card info">
+                <h3>Configuração do Ambiente Ruby</h3>
+                <p>Para melhor performance e compatibilidade, recomenda-se usar rbenv ou rvm para gerenciar versões do Ruby.</p>
+            </div>
+            
+            <h3>Instalando e Configurando rbenv</h3>
+            <div class="terminal">
+                <span class="command">sudo apt install rbenv</span><br>
+                <span class="command">echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc</span><br>
+                <span class="command">echo 'eval "$(rbenv init -)"' >> ~/.bashrc</span><br>
+                <span class="command">source ~/.bashrc</span><br>
+                <span class="command">rbenv install 3.2.2</span> <span class="comment"># Instale a versão desejada</span><br>
+                <span class="command">rbenv global 3.2.2</span> <span class="comment"># Defina como versão padrão</span>
+                <button class="copy-btn" onclick="copyToClipboard('sudo apt install rbenv && echo \'export PATH=\"$HOME/.rbenv/bin:$PATH\"\' >> ~/.bashrc && echo \'eval \"$(rbenv init -)\"\' >> ~/.bashrc && source ~/.bashrc && rbenv install 3.2.2 && rbenv global 3.2.2')">Copiar Tudo</button>
+            </div>
+            
+            <h3>Configuração do Git para Desenvolvimento Rails</h3>
+            <div class="terminal">
+                <span class="command">git config --global user.name "Seu Nome"</span><br>
+                <span class="command">git config --global user.email "seu@email.com"</span><br>
+                <span class="command">git config --global init.defaultBranch main</span><br>
+                <span class="command">git config --global core.autocrlf input</span> <span class="comment"># Importante para WSL</span>
+                <button class="copy-btn" onclick="copyToClipboard('git config --global user.name \"Seu Nome\" && git config --global user.email \"seu@email.com\" && git config --global init.defaultBranch main && git config --global core.autocrlf input')">Copiar Tudo</button>
+            </div>
+            
+            <h3>Gems Essenciais para Desenvolvimento</h3>
+            <div class="terminal">
+                <span class="command">gem install rubocop rubocop-rails rubocop-performance solargraph rails</span><br>
+                <span class="command">gem install debug pry-byebug</span> <span class="comment"># Ferramentas de debugging</span>
+                <button class="copy-btn" onclick="copyToClipboard('gem install rubocop rubocop-rails rubocop-performance solargraph rails && gem install debug pry-byebug')">Copiar Tudo</button>
+            </div>
+            
+            <h3>Configuração do RuboCop (.rubocop.yml)</h3>
+            <pre>require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.2.2
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+
+Layout/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/routes.rb'</pre>
+            
+            <h3>Configuração do Solargraph (.solargraph.yml)</h3>
+            <pre>include:
+- "**/*.rb"
+exclude:
+- spec/**/*
+- test/**/*
+- vendor/**/*
+- .bundle/**/*
+require: []
+domains: []
+reporters:
+- rubocop
+- require_not_found
+formatter:
+  rubocop:
+    cops: safe
+    except: []
+    only: []
+    extra_args: []
+require_paths: []
+plugins: []
+max_files: 5000</pre>
+        </div>
+    </div>
+
+    <div class="card warning">
+        <h2>⚠️ Lembrete Importante</h2>
+        <p>Nunca trabalhe diretamente em <code>/mnt/c/</code>. Sempre:</p>
+        <ol>
+            <li>Abra o terminal WSL</li>
+            <li>Navegue até seu projeto: <code>cd ~/projects/meu_app</code></li>
+            <li>Abra o VS Code: <code>code .</code></li>
+        </ol>
+        <p>Isso garantirá que você está trabalhando no sistema de arquivos Linux com performance máxima.</p>
+    </div>
+
+    <script>
+        // Script para os acordeões
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar toggles
+            const toggles = document.querySelectorAll('.toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const isVisible = content.style.display === 'block';
+                    
+                    content.style.display = isVisible ? 'none' : 'block';
+                    const icon = this.querySelector('span');
+                    icon.textContent = isVisible ? '►' : '▼';
+                });
+            });
+            
+            // Configurar tabs
+            const tablinks = document.querySelectorAll('.tablinks');
+            tablinks.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remover classe active de todas as tabs
+                    tablinks.forEach(t => t.classList.remove('active'));
+                    
+                    // Esconder todos os conteúdos de tab
+                    const tabcontents = document.querySelectorAll('.tabcontent');
+                    tabcontents.forEach(content => content.classList.remove('visible'));
+                    
+                    // Ativar a tab clicada
+                    this.classList.add('active');
+                    
+                    // Mostrar o conteúdo correspondente
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('visible');
+                });
+            });
+        });
+
+        // Função para copiar comandos
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Comando copiado: " + text);
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
